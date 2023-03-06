@@ -11,7 +11,7 @@ public class FacePlayer : MonoBehaviour
     {
         if (target != null)
         {
-            transform.LookAt(target);
+            this.transform.LookAt(target);
         }
     }
 }

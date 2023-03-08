@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class cupLogic : MonoBehaviour
 {
+
+    //public Vector3 catapultLaunch = new Vector3(100.0f, 100.0f, 100.0f);
+    bool hasIce = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +27,8 @@ public class cupLogic : MonoBehaviour
 
         if (other.gameObject.CompareTag("iceScooper"))
         {
+            hasIce = true;
+
             //other.gameObject.SetActive(false);
 
             other.gameObject.transform.position = new Vector3(0, 3, 0);

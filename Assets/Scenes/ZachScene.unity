@@ -189,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94c09fea85056a8488a96d91f939a6da, type: 2}
+  - {fileID: 2100000, guid: 9d6d53254993368469608680790a71f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -494,6 +494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7959520094308740327, guid: 37d9ffb3fa35a744ba9426ca7f5d8ee5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b9aeefd42d522d4eb5b5fed84f37879, type: 2}
     - target: {fileID: 7959520094308740377, guid: 37d9ffb3fa35a744ba9426ca7f5d8ee5, type: 3}
       propertyPath: m_Name
       value: Crate
@@ -781,6 +785,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 904233532079194214, guid: a8effb87166b4204e9a6b5906e7abf8c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b9aeefd42d522d4eb5b5fed84f37879, type: 2}
+    - target: {fileID: 5602095544539098431, guid: a8effb87166b4204e9a6b5906e7abf8c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b9aeefd42d522d4eb5b5fed84f37879, type: 2}
     - target: {fileID: 6415947637863256656, guid: a8effb87166b4204e9a6b5906e7abf8c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -837,6 +849,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8333338463168698203, guid: a8effb87166b4204e9a6b5906e7abf8c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b9aeefd42d522d4eb5b5fed84f37879, type: 2}
     - target: {fileID: 9082849702035630459, guid: a8effb87166b4204e9a6b5906e7abf8c, type: 3}
       propertyPath: m_Name
       value: Crate_Stack

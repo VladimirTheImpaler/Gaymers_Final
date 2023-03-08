@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class FacePlayer : MonoBehaviour
 {
-    public Transform target;
+    public GameObject player;
 
     // Update is called once per frame
     void Update()
     {
-        if (target != null)
+        if (player != null)
         {
-            this.transform.LookAt(target);
+            this.transform.LookAt(player.transform);
+
+            Vector3 angles = transform.rotation.eulerAngles;
+            angles.x = 0;
+            angles.z = 0;
+
+            transform.rotation = Quaternion.Euler(angles);
         }
     }
 }

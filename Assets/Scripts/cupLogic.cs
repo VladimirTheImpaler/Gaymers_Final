@@ -15,4 +15,24 @@ public class cupLogic : MonoBehaviour
     {
         
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("iceScooper"))
+        {
+            //other.gameObject.SetActive(false);
+
+            other.gameObject.transform.position = new Vector3(0, 3, 0);
+            //AudioSource.PlayClipAtPoint(sliceSound, transform.position);
+        }
+        else
+        {
+            other.gameObject.SetActive(true);
+        }
+    }
+
+
 }
+

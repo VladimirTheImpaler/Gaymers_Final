@@ -5,9 +5,7 @@ using UnityEngine;
 public class cupLogic : MonoBehaviour
 {
 
-    //public Vector3 catapultLaunch = new Vector3(100.0f, 100.0f, 100.0f);
-    bool hasIce = false;
-
+    //public string cupList = {"air"};
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +16,8 @@ public class cupLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
 
 
@@ -27,12 +26,21 @@ public class cupLogic : MonoBehaviour
 
         if (other.gameObject.CompareTag("iceScooper"))
         {
-            hasIce = true;
+
+            //add ice to cuplist if it doesnt already have it
 
             //other.gameObject.SetActive(false);
 
             other.gameObject.transform.position = new Vector3(0, 3, 0);
-            //AudioSource.PlayClipAtPoint(sliceSound, transform.position);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        }
+        else if (other.gameObject.CompareTag("liquid"))
+        {
+
+            //add liquid to cuplist if it doesnt already have it
+
+            other.gameObject.SetActive(false);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else
         {

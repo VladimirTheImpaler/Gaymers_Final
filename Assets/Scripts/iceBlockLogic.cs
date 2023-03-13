@@ -6,8 +6,8 @@ public class iceBlockLogic : MonoBehaviour
 {
     public GameObject iceCube;
 
-    int timer = 50;
-    bool useAble = true;
+    int timer = 100;
+    bool useAble = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,9 +22,9 @@ public class iceBlockLogic : MonoBehaviour
         if (useAble)
         {
 
-            timer = 50;
+            timer = 100;
             //summon iceCube
-            GameObject newIce = Instantiate(iceCube, new Vector3(-0.5f, 3.65f, 0.85f), Quaternion.identity) as GameObject;
+            GameObject newIce = Instantiate(iceCube, new Vector3(5.5f, 4.5f, 0f), Quaternion.identity) as GameObject;
         }
 
     }
@@ -44,4 +44,21 @@ public class iceBlockLogic : MonoBehaviour
             useAble = false;
         }
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("icePick"))
+        {
+
+            spawnIce();
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        }
+        else
+        {
+            other.gameObject.SetActive(true);
+        }
+    }
+
 }

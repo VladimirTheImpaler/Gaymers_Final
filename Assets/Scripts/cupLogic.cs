@@ -40,6 +40,14 @@ public class cupLogic : MonoBehaviour
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
+        else if (other.gameObject.CompareTag("iceCube"))
+        {
+
+            //add liquid to cuplist if it doesnt already have it
+
+            other.gameObject.SetActive(false);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        }
         else
         {
             other.gameObject.SetActive(true);

@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// "Breaks" object if a certain speed is exceeded and a collision is detected
-// For bottles, liquid spill + debris (clean with mop/broom)
-// Speed gotten from ObjectPosition
+// Respawn object back at its original position
+// Original point gotten from ObjectPosition
 
-public class BreakOnDrop : MonoBehaviour
+public class RespawnToPoint : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

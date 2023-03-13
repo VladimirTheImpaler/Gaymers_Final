@@ -7,7 +7,7 @@ public class tempBarrelScript : MonoBehaviour
 
     public GameObject liquidDrop;
 
-    int timer = 1000;
+    int timer = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class tempBarrelScript : MonoBehaviour
     private void spawnBall()
     {
 
-        GameObject a = Instantiate(liquidDrop, new Vector3(0, 5, 0), Quaternion.identity) as GameObject;
+        GameObject newLiquid = Instantiate(liquidDrop, new Vector3(-0.5f, 3.5f, 1f), Quaternion.identity) as GameObject;
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class tempBarrelScript : MonoBehaviour
         if (timer < 0)
         {
 
-            timer = 1000;
+            timer = 10;
             //summon liquidBall
             spawnBall();
         }

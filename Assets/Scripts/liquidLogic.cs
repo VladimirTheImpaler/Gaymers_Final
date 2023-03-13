@@ -5,7 +5,7 @@ using UnityEngine;
 public class liquidLogic : MonoBehaviour
 {
 
-    public int life = 50000;
+    public int life = 5000;
 
     // Start is called before the first frame update
     void Start()

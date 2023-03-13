@@ -29,12 +29,10 @@ public class cupLogic : MonoBehaviour
 
             //add ice to cuplist if it doesnt already have it
 
-            //other.gameObject.SetActive(false);
-
-            other.gameObject.transform.position = new Vector3(0, 3, 0);
+            other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
-        else if (other.gameObject.CompareTag("liquid"))
+        else if (other.gameObject.CompareTag("kegLiquid"))
         {
 
             //add liquid to cuplist if it doesnt already have it

@@ -12,6 +12,8 @@ TagManager:
   - cupColliderDisk
   - iceCube
   - icePick
+  - apple
+  - appleJuice
   layers:
   - Default
   - TransparentFX

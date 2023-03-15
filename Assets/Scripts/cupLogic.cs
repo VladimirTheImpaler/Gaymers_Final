@@ -5,7 +5,7 @@ using UnityEngine;
 public class cupLogic : MonoBehaviour
 {
 
-    //public string cupList = {"air"};
+    public List<string> itemList = new List<string>();
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +20,14 @@ public class cupLogic : MonoBehaviour
 
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.CompareTag("iceScooper"))
+        if (other.gameObject.CompareTag("iceCube"))
         {
 
-            //add ice to cuplist if it doesnt already have it
+            //add the item to list
+            itemList.Add("iceCube");
 
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
@@ -35,15 +35,17 @@ public class cupLogic : MonoBehaviour
         else if (other.gameObject.CompareTag("kegLiquid"))
         {
 
-            //add liquid to cuplist if it doesnt already have it
+            //add the item to list
+            itemList.Add("kegLiquid");
 
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
-        else if (other.gameObject.CompareTag("iceCube"))
+        else if (other.gameObject.CompareTag("appleJuice"))
         {
 
-            //add liquid to cuplist if it doesnt already have it
+            //add the item to list
+            itemList.Add("appleJuice");
 
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);

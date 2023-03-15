@@ -18,6 +18,7 @@ public class PourOnRotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         rotationX = GetComponent<Rigidbody>.transform.rotation.x;
         rotationY = GetComponent<Rigidbody>.transform.rotation.y;
         rotationZ = GetComponent<Rigidbody>.transform.rotation.z;
@@ -28,5 +29,6 @@ public class PourOnRotate : MonoBehaviour
         else {
             pouring = false;
         }
+        */
     }
 }

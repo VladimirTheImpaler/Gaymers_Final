@@ -23,7 +23,6 @@ public class iceBlockLogic : MonoBehaviour
         {
 
             timer = 100;
-            //summon iceCube
             GameObject newIce = Instantiate(iceCube, new Vector3(5.5f, 4.5f, 0f), Quaternion.identity) as GameObject;
         }
 

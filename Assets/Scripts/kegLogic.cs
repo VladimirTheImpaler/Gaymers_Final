@@ -6,6 +6,7 @@ public class kegLogic : MonoBehaviour
 {
 
     public GameObject liquidDrop;
+    public Vector3 objectSpawnlocation = new Vector3(-0.5f, 3.65f, 0.85f);
 
     int timer = 10;
 
@@ -26,7 +27,7 @@ public class kegLogic : MonoBehaviour
 
             timer = 10;
             //summon liquidBall
-            GameObject newLiquid = Instantiate(liquidDrop, new Vector3(-0.5f, 3.65f, 0.85f), Quaternion.identity) as GameObject;
+            GameObject newLiquid = Instantiate(liquidDrop, objectSpawnlocation, Quaternion.identity) as GameObject;
         }
         
     }

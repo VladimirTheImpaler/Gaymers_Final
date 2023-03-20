@@ -626,7 +626,7 @@ MonoBehaviour:
   atBarPos: -5
   startingPos: -15
   leavingBarX: 2
-  endingX: 15
+  endingX: -15
   xStart: 2
   zStart: -5
   orderComplete: 0

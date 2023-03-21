@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class CustomerController : MonoBehaviour
 {
+    public GameObject cupPropertyList;
+
     public TextMeshProUGUI customerOrderText;
     public TextMeshProUGUI ingredientsListText;
 
-    public GameObject cup;
+    private string randomOrderableItem;
 
     public float speed = 5.0f;
     public float atBarPos = -5f;
@@ -20,13 +22,13 @@ public class CustomerController : MonoBehaviour
     public float zStart = -5f;
     private int direction = 1; //positive to start
 
-    private List<string> orderText = new List<string>() { "Good morning, can I order a", "Good afternoon, can I order a", "Good evening, can I order a" };
-    private List<string> orderableItems = new List<string>() { "Drink1", "Drink2", "Drink3" };
+    private List<string> orderableItems = new List<string>() { "Purple Ice", "Liquid Apple", "Cube Juice" };
     private List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice" };
 
     public bool orderComplete;
     private bool arrivedAtBar;
     private bool displayedOrder;
+
 
     private void Start()
     {
@@ -39,6 +41,7 @@ public class CustomerController : MonoBehaviour
 
     void Update()
     {
+        // Moves the customer to the bar
         if (!arrivedAtBar && transform.position.z <= atBarPos)
         {
             float zNew = transform.position.z +
@@ -47,41 +50,79 @@ public class CustomerController : MonoBehaviour
             transform.position = new Vector3(xStart, 2.5f, zNew);            
         }
             
+        // Displays the customer's order once they arrive at the bar
         if ((int)transform.position.z == atBarPos)
         {
             if (!displayedOrder)
             {
+                displayedOrder = true;
                 arrivedAtBar = true;
-                var orderTextNumber = UnityEngine.Random.Range(0, 2);
-                var orderableItemsNumber = UnityEngine.Random.Range(0, 2);
 
-                var randomOrderText = orderText[orderTextNumber];
-                var randomOrderableItem = orderableItems[orderableItemsNumber];
+                var randomOrderTextNumber = UnityEngine.Random.Range(0, 4);
+                var randomOrderableItemsNumber = UnityEngine.Random.Range(0, orderableItems.Count);
 
-                customerOrderText.text = randomOrderText + " " + randomOrderableItem;
+                randomOrderableItem = orderableItems[randomOrderableItemsNumber];
 
-                if (randomOrderableItem == orderableItems[0])
+                customerOrderText.text = $"{randomOrderTextNumber} {randomOrderableItem}";
+
+                switch (randomOrderTextNumber)
                 {
-                    ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[0]} \n 2. {ingredients[1]}";
+                    case 0:
+                        customerOrderText.text = $"Hello! Could I please get a {randomOrderableItem}? Thank you!";
+                        break;
+                    case 1:
+                        customerOrderText.text = $"Good afternoon, may I order a {randomOrderableItem}?";
+                        break;
+                    case 2:
+                        customerOrderText.text = $"Greetings! I would like a {randomOrderableItem} please. They are my favorite!";
+                        break;
+                    case 3:
+                        customerOrderText.text = $"Oh boy, I think that a {randomOrderableItem} sounds delicious. May I get one of those?";
+                        break;
                 }
-                else if (randomOrderableItem == orderableItems[1])
+
+                switch (randomOrderableItem)
                 {
-                    ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[1]} \n 2. {ingredients[2]}";
-                }
-                else if (randomOrderableItem == orderableItems[2])
-                {
-                    ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[2]} \n 2. {ingredients[0]}";
+                    case "Purple Ice":
+                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[0]} \n 2. {ingredients[1]}";
+                        break;
+                    case "Liquid Apple":
+                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[1]} \n 2. {ingredients[2]}";
+                        break;
+                    case "Cube Juice":
+                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[2]} \n 2. {ingredients[0]}";
+                        break;
                 }
 
                 customerOrderText.enabled = true;
                 ingredientsListText.enabled = true;
-                displayedOrder = true;
             }            
         }
 
         if (!orderComplete)
         {
-            // Compare lists of ingredients to cup values
+            var cupList = cupPropertyList.GetComponent<cupLogic>().itemList;
+            switch (randomOrderableItem)
+            {
+                case "Purple Ice":
+                    if (cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
+                    {
+                        orderComplete = true;
+                    }
+                    break;
+                case "Liquid Apple":
+                    if (cupList.Contains("kegLiquid") && cupList.Contains("appleJuice"))
+                    {
+                        orderComplete = true;
+                    }
+                    break;
+                case "Cube Juice":
+                    if (cupList.Contains("appleJuice") && cupList.Contains("iceCube"))
+                    {
+                        orderComplete = true;
+                    }
+                    break;
+            }
         }
 
         if (orderComplete && arrivedAtBar)

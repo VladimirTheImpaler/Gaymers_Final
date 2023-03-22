@@ -34,7 +34,7 @@ public class CustomerController : MonoBehaviour
     {
         arrivedAtBar = false;
         displayedOrder = false;
-        transform.position = new Vector3(2, 2.5f, -20);
+        transform.position = new Vector3(2, 4f, -20);
         customerOrderText.enabled = false;
         ingredientsListText.enabled = false;
     }
@@ -47,7 +47,7 @@ public class CustomerController : MonoBehaviour
             float zNew = transform.position.z +
                         direction * speed * Time.deltaTime;
 
-            transform.position = new Vector3(xStart, 2.5f, zNew);            
+            transform.position = new Vector3(xStart, 4f, zNew);            
         }
             
         // Displays the customer's order once they arrive at the bar
@@ -90,7 +90,7 @@ public class CustomerController : MonoBehaviour
                         ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[1]} \n 2. {ingredients[2]}";
                         break;
                     case "Cube Juice":
-                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[2]} \n 2. {ingredients[0]}";
+                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[2]} \n 2. {ingredients[0]} \n 3. {ingredients[1]}";
                         break;
                 }
 
@@ -117,7 +117,7 @@ public class CustomerController : MonoBehaviour
                     }
                     break;
                 case "Cube Juice":
-                    if (cupList.Contains("appleJuice") && cupList.Contains("iceCube"))
+                    if (cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
                     {
                         orderComplete = true;
                     }
@@ -130,16 +130,17 @@ public class CustomerController : MonoBehaviour
             float xNew = transform.position.x +
                     -1 * speed * Time.deltaTime;
 
-            transform.position = new Vector3(xNew, 2.5f, zStart);
+            transform.position = new Vector3(xNew, 4f, zStart);
 
             if ((int)transform.position.x == endingX)
             {
                 arrivedAtBar = false;
                 orderComplete = false;
                 displayedOrder = false;
-                transform.position = new Vector3(2, 2.5f, -20);
+                transform.position = new Vector3(2, 4f, -20);
                 customerOrderText.enabled = false;
                 ingredientsListText.enabled = false;
+                cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
             }
         }
     }

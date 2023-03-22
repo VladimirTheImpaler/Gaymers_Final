@@ -3447,7 +3447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6eedd93cd9be9c4c8e1256c24e2d304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1357288668}
 --- !u!65 &777277766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6089,6 +6089,11 @@ Transform:
   m_Father: {fileID: 733713904}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1357288668 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 101548, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 122822125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1361943127
 GameObject:
   m_ObjectHideFlags: 0

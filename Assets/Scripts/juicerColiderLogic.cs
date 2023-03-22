@@ -7,6 +7,7 @@ public class juicerColiderLogic : MonoBehaviour
 
     public GameObject appleJuice;
     public bool fullyCrushed = false;
+    public Vector3 objectSpawnlocation = new Vector3(2.2f, 4f, 1.4f);
 
     public List<string> itemList = new List<string>();
 
@@ -31,7 +32,7 @@ public class juicerColiderLogic : MonoBehaviour
 
             if (itemList.Contains("apple"))
             {
-                GameObject newJuice = Instantiate(appleJuice, new Vector3(2.2f, 4f, 1.4f), Quaternion.identity) as GameObject;
+                GameObject newJuice = Instantiate(appleJuice, objectSpawnlocation, Quaternion.identity) as GameObject;
             }
         }
 

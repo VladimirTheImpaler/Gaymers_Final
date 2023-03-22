@@ -5,6 +5,7 @@ using UnityEngine;
 public class iceBlockLogic : MonoBehaviour
 {
     public GameObject iceCube;
+    public Vector3 objectSpawnlocation = new Vector3(5.5f, 4.5f, 0.5f);
 
     int timer = 100;
     bool useAble = false;
@@ -23,7 +24,7 @@ public class iceBlockLogic : MonoBehaviour
         {
 
             timer = 100;
-            GameObject newIce = Instantiate(iceCube, new Vector3(5.5f, 4.5f, 0f), Quaternion.identity) as GameObject;
+            GameObject newIce = Instantiate(iceCube, objectSpawnlocation, Quaternion.identity) as GameObject;
         }
 
     }

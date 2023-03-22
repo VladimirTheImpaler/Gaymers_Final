@@ -7,7 +7,7 @@ public class iceBlockLogic : MonoBehaviour
     public GameObject iceCube;
     public Vector3 objectSpawnlocation = new Vector3(5.5f, 4.5f, 0.5f);
 
-    int timer = 100;
+    int timer = 10;
     bool useAble = false;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class iceBlockLogic : MonoBehaviour
         if (useAble)
         {
 
-            timer = 100;
+            timer = 10;
             GameObject newIce = Instantiate(iceCube, objectSpawnlocation, Quaternion.identity) as GameObject;
         }
 

@@ -90,7 +90,7 @@ public class CustomerController : MonoBehaviour
                         ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[1]} \n 2. {ingredients[2]}";
                         break;
                     case "Cube Juice":
-                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[2]} \n 2. {ingredients[0]}";
+                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[2]} \n 2. {ingredients[0]} \n 3. {ingredients[1]}";
                         break;
                 }
 
@@ -117,7 +117,7 @@ public class CustomerController : MonoBehaviour
                     }
                     break;
                 case "Cube Juice":
-                    if (cupList.Contains("appleJuice") && cupList.Contains("iceCube"))
+                    if (cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
                     {
                         orderComplete = true;
                     }
@@ -140,6 +140,7 @@ public class CustomerController : MonoBehaviour
                 transform.position = new Vector3(2, 2.5f, -20);
                 customerOrderText.enabled = false;
                 ingredientsListText.enabled = false;
+                cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
             }
         }
     }

@@ -5,8 +5,9 @@ using UnityEngine;
 public class kegLogic : MonoBehaviour
 {
 
+    public GameObject spawnSphere;
     public GameObject liquidDrop;
-    public Vector3 objectSpawnlocation = new Vector3(-0.5f, 3.65f, 0.85f);
+    public Vector3 objectSpawnlocation;
 
     int timer = 10;
 
@@ -20,14 +21,15 @@ public class kegLogic : MonoBehaviour
     public void spawnBall()
     {
 
+        objectSpawnlocation = spawnSphere.GetComponent<Rigidbody>().position;
         timer -= 1;
 
         if (timer < 0)
         {
 
-            timer = 10;
-            //summon liquidBall
-            GameObject newLiquid = Instantiate(liquidDrop, objectSpawnlocation, Quaternion.identity) as GameObject;
+        timer = 10;
+        //summon liquidBall
+        GameObject newLiquid = Instantiate(liquidDrop, objectSpawnlocation, Quaternion.identity) as GameObject;
         }
         
     }

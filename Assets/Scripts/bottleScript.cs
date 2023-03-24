@@ -5,11 +5,11 @@ using UnityEngine;
 public class bottleScript : MonoBehaviour
 {
 
+    public GameObject spawnSphere;
     public GameObject liquidDrop;
-    public GameObject bottleSpawnSphere;
-    public Vector3 objectSpawnlocation = new Vector3(5f, 5f, 5f);
+    public Vector3 objectSpawnlocation;
 
-    //int timer = 10;
+    int timer = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -21,15 +21,16 @@ public class bottleScript : MonoBehaviour
     public void spawnBall()
     {
 
-        //timer -= 1;
+        objectSpawnlocation = spawnSphere.GetComponent<Rigidbody>().position;
+        timer -= 1;
 
-        //if (timer < 0)
-        //{
+        if (timer < 0)
+        {
 
-            //timer = 10;
+            timer = 10;
             //summon liquidBall
-            GameObject newLiquid = Instantiate(liquidDrop, bottleSpawnSphere.GetComponent<Rigidbody>().position, Quaternion.identity) as GameObject;
-        //}
+            GameObject newLiquid = Instantiate(liquidDrop, objectSpawnlocation, Quaternion.identity) as GameObject;
+        }
 
     }
 

@@ -5962,7 +5962,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 26843c11ae0e1b64ba067d1ce2542f8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6952,6 +6952,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel
       objectReference: {fileID: 0}
+    - target: {fileID: 1480537808582423688, guid: 72bee8048b6cdaa40b7f5f9aae10fd79, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397fac09777b09428385d51b3009022, type: 2}
+    - target: {fileID: 3008156549779038798, guid: 72bee8048b6cdaa40b7f5f9aae10fd79, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397fac09777b09428385d51b3009022, type: 2}
+    - target: {fileID: 3892040518079993757, guid: 72bee8048b6cdaa40b7f5f9aae10fd79, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b9aeefd42d522d4eb5b5fed84f37879, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72bee8048b6cdaa40b7f5f9aae10fd79, type: 3}
 --- !u!1 &1322158668 stripped
@@ -8838,6 +8850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BottleObject
       objectReference: {fileID: 0}
+    - target: {fileID: -6876899558003405960, guid: 3cd2e11fbb88d504aac34fe1b78dcfeb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7942588c16c8d834d854e654588814a8, type: 2}
     - target: {fileID: 919132149155446097, guid: 3cd2e11fbb88d504aac34fe1b78dcfeb, type: 3}
       propertyPath: m_Name
       value: Test Bottle

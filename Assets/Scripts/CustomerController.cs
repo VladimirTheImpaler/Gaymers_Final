@@ -8,7 +8,6 @@ public class CustomerController : MonoBehaviour
 {
     public GameObject orderCompleteBox;
     public GameObject cupPropertyList;
-    public GameObject cup;
 
     public TextMeshProUGUI customerOrderText;
     public TextMeshProUGUI ingredientsListText;
@@ -123,7 +122,6 @@ public class CustomerController : MonoBehaviour
                 customerOrderText.enabled = false;
                 ingredientsListText.enabled = false;
                 cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
-                cup.transform.position = new Vector3(-1.074f, 3.537f, 3.119f);
             }
         }
     }

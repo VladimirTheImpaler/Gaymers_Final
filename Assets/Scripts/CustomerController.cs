@@ -6,21 +6,23 @@ using UnityEngine;
 
 public class CustomerController : MonoBehaviour
 {
+    public GameObject orderCompleteBox;
     public GameObject cupPropertyList;
+    public GameObject cup;
 
     public TextMeshProUGUI customerOrderText;
     public TextMeshProUGUI ingredientsListText;
 
-    private string randomOrderableItem;
+    public string randomOrderableItem;
 
     public float speed = 5.0f;
     public float atBarPos = -5f;
-    public float startingPos = -15f; //starting position
+    public float startingPos = -15f;
     public float leavingBarX = 2f;
     public float endingX = -15f;
     public float xStart = -10f;
     public float zStart = -5f;
-    private int direction = 1; //positive to start
+    private int direction = 1;
 
     private List<string> orderableItems = new List<string>() { "Purple Ice", "Liquid Apple", "Cube Juice" };
     private List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice" };
@@ -101,28 +103,7 @@ public class CustomerController : MonoBehaviour
 
         if (!orderComplete)
         {
-            var cupList = cupPropertyList.GetComponent<cupLogic>().itemList;
-            switch (randomOrderableItem)
-            {
-                case "Purple Ice":
-                    if (cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
-                    {
-                        orderComplete = true;
-                    }
-                    break;
-                case "Liquid Apple":
-                    if (cupList.Contains("kegLiquid") && cupList.Contains("appleJuice"))
-                    {
-                        orderComplete = true;
-                    }
-                    break;
-                case "Cube Juice":
-                    if (cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
-                    {
-                        orderComplete = true;
-                    }
-                    break;
-            }
+            orderComplete = orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete;
         }
 
         if (orderComplete && arrivedAtBar)
@@ -136,11 +117,13 @@ public class CustomerController : MonoBehaviour
             {
                 arrivedAtBar = false;
                 orderComplete = false;
+                orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete = false;
                 displayedOrder = false;
                 transform.position = new Vector3(2, 4f, -20);
                 customerOrderText.enabled = false;
                 ingredientsListText.enabled = false;
                 cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
+                cup.transform.position = new Vector3(-1.074f, 3.537f, 3.119f);
             }
         }
     }

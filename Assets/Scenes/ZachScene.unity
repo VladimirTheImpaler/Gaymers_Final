@@ -6743,9 +6743,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderCompleteBox: {fileID: 193181063}
   cupPropertyList: {fileID: 194023358}
-  cup: {fileID: 975164415}
+  customer: {fileID: 1192592355}
   customerOrderText: {fileID: 821898062}
   ingredientsListText: {fileID: 2042375017}
+  walk1: {fileID: 2100000, guid: 52635941dba4b4a4b9e29a2592872c9d, type: 2}
+  walk2: {fileID: 2100000, guid: 8bdc98a0808037e488ce99eabd34c086, type: 2}
+  walk3: {fileID: 2100000, guid: 98719b2271ca08b4aaa40f94d6305a1f, type: 2}
+  walk4: {fileID: 2100000, guid: 9d6d53254993368469608680790a71f7, type: 2}
   randomOrderableItem: 
   speed: 7
   atBarPos: -6
@@ -6754,6 +6758,7 @@ MonoBehaviour:
   endingX: -25
   xStart: 2
   zStart: -6
+  delay: 0.2
   orderComplete: 0
 --- !u!114 &1192592357
 MonoBehaviour:
@@ -6801,7 +6806,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d6d53254993368469608680790a71f7, type: 2}
+  - {fileID: 2100000, guid: 52635941dba4b4a4b9e29a2592872c9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -8,9 +8,15 @@ public class CustomerController : MonoBehaviour
 {
     public GameObject orderCompleteBox;
     public GameObject cupPropertyList;
+    public GameObject customer;
 
     public TextMeshProUGUI customerOrderText;
     public TextMeshProUGUI ingredientsListText;
+
+    public Material walk1;
+    public Material walk2;
+    public Material walk3;
+    public Material walk4;
 
     public string randomOrderableItem;
 
@@ -22,6 +28,9 @@ public class CustomerController : MonoBehaviour
     public float xStart = -10f;
     public float zStart = -5f;
     private int direction = 1;
+    private int materialIndex = 0;
+    public float delay = .2f;
+    float timer;
 
     private List<string> orderableItems = new List<string>() { "Purple Ice", "Liquid Apple", "Cube Juice" };
     private List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice" };
@@ -42,13 +51,23 @@ public class CustomerController : MonoBehaviour
 
     void Update()
     {
+        timer += Time.deltaTime;
+        if (timer > delay)
+        {
+            Debug.Log("Getting warmer");
+            CustomerWalk();
+            timer -= delay;
+        }
+
         // Moves the customer to the bar
         if (!arrivedAtBar && transform.position.z <= atBarPos)
         {
             float zNew = transform.position.z +
                         direction * speed * Time.deltaTime;
 
-            transform.position = new Vector3(xStart, 4f, zNew);            
+            transform.position = new Vector3(xStart, 4f, zNew);
+
+            
         }
             
         // Displays the customer's order once they arrive at the bar
@@ -124,5 +143,27 @@ public class CustomerController : MonoBehaviour
                 cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
             }
         }
+    }
+
+    public void CustomerWalk()
+    {
+        Debug.Log("Hello there");
+        switch (materialIndex)
+        {
+            case 0:
+                customer.GetComponent<MeshRenderer>().material = walk1;
+                break;
+            case 1:
+                customer.GetComponent<MeshRenderer>().material = walk2;
+                break;
+            case 2:
+                customer.GetComponent<MeshRenderer>().material = walk3;
+                break;
+            case 3:
+                customer.GetComponent<MeshRenderer>().material = walk4;
+                materialIndex = -1;
+                break;
+        }
+        materialIndex++;
     }
 }

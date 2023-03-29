@@ -39,7 +39,6 @@ public class CustomerController : MonoBehaviour
     private bool arrivedAtBar;
     private bool displayedOrder;
 
-
     private void Start()
     {
         arrivedAtBar = false;
@@ -54,7 +53,6 @@ public class CustomerController : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > delay)
         {
-            Debug.Log("Getting warmer");
             CustomerWalk();
             timer -= delay;
         }
@@ -147,7 +145,6 @@ public class CustomerController : MonoBehaviour
 
     public void CustomerWalk()
     {
-        Debug.Log("Hello there");
         switch (materialIndex)
         {
             case 0:

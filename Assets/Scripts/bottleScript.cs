@@ -38,6 +38,6 @@ public class bottleScript : MonoBehaviour
     void Update()
     {
 
-
+        spawnBall();
     }
 }

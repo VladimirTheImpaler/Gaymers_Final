@@ -52,7 +52,7 @@ public class juicerColiderLogic : MonoBehaviour
         }
         else
         {
-            other.gameObject.SetActive(true);
+            //other.gameObject.SetActive(true);
         }
     }
 

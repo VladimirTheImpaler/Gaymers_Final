@@ -32,8 +32,8 @@ public class CustomerController : MonoBehaviour
     public float delay = .2f;
     float timer;
 
-    private List<string> orderableItems = new List<string>() { "Purple Ice", "Liquid Apple", "Cube Juice" };
-    private List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice" };
+    public List<string> orderableItems = new List<string>() { "Purple Ice", "Liquid Apple", "Cube Juice" };
+    public List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice" };
 
     public bool orderComplete;
     private bool arrivedAtBar;
@@ -80,8 +80,6 @@ public class CustomerController : MonoBehaviour
                 var randomOrderableItemsNumber = UnityEngine.Random.Range(0, orderableItems.Count);
 
                 randomOrderableItem = orderableItems[randomOrderableItemsNumber];
-
-                customerOrderText.text = $"{randomOrderTextNumber} {randomOrderableItem}";
 
                 switch (randomOrderTextNumber)
                 {

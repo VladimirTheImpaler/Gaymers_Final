@@ -63,16 +63,16 @@ public class CustomerController : MonoBehaviour
             float zNew = transform.position.z +
                         direction * speed * Time.deltaTime;
 
-            transform.position = new Vector3(xStart, 4f, zNew);
-
-            
+            transform.position = new Vector3(xStart, 4f, zNew);            
         }
             
         // Displays the customer's order once they arrive at the bar
         if ((int)transform.position.z == atBarPos)
         {
+            Debug.Log("Hello");
             if (!displayedOrder)
             {
+                Debug.Log("there");
                 displayedOrder = true;
                 arrivedAtBar = true;
 

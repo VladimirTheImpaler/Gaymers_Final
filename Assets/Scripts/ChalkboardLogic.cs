@@ -8,20 +8,19 @@ public class ChalkboardLogic : MonoBehaviour
     public GameObject Customer;
 
     public TextMeshProUGUI orderAndIngredients;
+    public Canvas chalkboardCanvas;
 
     private bool displayedOrder;
 
-    private List<string> orderableItems = new List<string>();
     private List<string> ingredients = new List<string>();
 
 
     // Start is called before the first frame update
     void Start()
     {
-        orderableItems = Customer.GetComponent<CustomerController>().orderableItems;
         ingredients = Customer.GetComponent<CustomerController>().ingredients;
         displayedOrder = false;
-        orderAndIngredients.enabled = false;
+        chalkboardCanvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -29,13 +28,9 @@ public class ChalkboardLogic : MonoBehaviour
     {
         var randomOrderableItem = Customer.GetComponent<CustomerController>().randomOrderableItem;
 
-        Debug.Log("Almost");
-
-        if (randomOrderableItem != null && !displayedOrder)
+        if (randomOrderableItem != string.Empty && !displayedOrder)
         {
             displayedOrder = true;
-
-            Debug.Log("There");
 
             switch (randomOrderableItem)
             {
@@ -50,7 +45,7 @@ public class ChalkboardLogic : MonoBehaviour
                     break;
             }
 
-            orderAndIngredients.enabled = true;
+            chalkboardCanvas.enabled = true;
 
             /*GameObject addedChild = (GameObject)Instantiate(togglePrefab);
             addedChild.transform.SetParent(toggleContainer);

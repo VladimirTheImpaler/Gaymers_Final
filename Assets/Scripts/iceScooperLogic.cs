@@ -66,7 +66,6 @@ public class iceScooperLogic : MonoBehaviour
             {
                 cubeList[i].GetComponent<Rigidbody>().isKinematic = false;
                 cubeList[i].GetComponent<Rigidbody>().useGravity = true;
-                cubeList[i].
             }
             
         }

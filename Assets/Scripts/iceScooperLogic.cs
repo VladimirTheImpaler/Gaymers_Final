@@ -5,7 +5,9 @@ using UnityEngine;
 public class iceScooperLogic : MonoBehaviour
 {
 
+    public List<GameObject> cubeList = new List<GameObject>();
     public bool hasIce = false;
+    public bool isPouring = false;
     public GameObject cube0;
     public GameObject cube1;
     public GameObject cube2;
@@ -20,38 +22,55 @@ public class iceScooperLogic : MonoBehaviour
     void Start()
     {
 
+        cubeList.Add(cube0);
+        cubeList.Add(cube1);
+        cubeList.Add(cube2);
+        cubeList.Add(cube3);
+        cubeList.Add(cube4);
+        cubeList.Add(cube5);
+        cubeList.Add(cube6);
+        cubeList.Add(cube7);
+        cubeList.Add(cube8);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        cube4.GetComponent<Rigidbody>().isKinematic = false;
+        cube4.GetComponent<Rigidbody>().useGravity = true;
+
         if (hasIce)
         {
 
-            cube0.SetActive(true);
-            cube1.SetActive(true);
-            cube2.SetActive(true);
-            cube3.SetActive(true);
-            cube4.SetActive(true);
-            cube5.SetActive(true);
-            cube6.SetActive(true);
-            cube7.SetActive(true);
-            cube8.SetActive(true);
+            for(int i = 0; i < cubeList.Count; i++)
+            {
+                cubeList[i].SetActive(true);
+            }
         }
         else
         {
 
-            cube0.SetActive(false);
-            cube1.SetActive(false);
-            cube2.SetActive(false);
-            cube3.SetActive(false);
-            cube4.SetActive(false);
-            cube5.SetActive(false);
-            cube6.SetActive(false);
-            cube7.SetActive(false);
-            cube8.SetActive(false);
+            for (int i = 0; i < cubeList.Count; i++)
+            {
+                cubeList[i].SetActive(false);
+            }
         }
+
+        isPouring = GetComponent<PourOnRotate>().isPouring;
+
+        if (isPouring)
+        {
+
+            for (int i = 0; i < cubeList.Count; i++)
+            {
+                cubeList[i].GetComponent<Rigidbody>().isKinematic = false;
+                cubeList[i].GetComponent<Rigidbody>().useGravity = true;
+                cubeList[i].
+            }
+            
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)

@@ -16,6 +16,12 @@ Kd 0.75 0.69 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 0.95 1.00 0.33
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
 newmtl pasted__lambert2SG
 illum 4
 Kd 1.00 0.10 0.00

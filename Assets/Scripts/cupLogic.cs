@@ -6,7 +6,6 @@ public class cupLogic : MonoBehaviour
 {
 
     public List<string> itemList = new List<string>();
-    public GameObject iceScooper;
 
     // Start is called before the first frame update
     void Start()
@@ -46,15 +45,6 @@ public class cupLogic : MonoBehaviour
             itemList.Add("appleJuice");
 
             other.gameObject.SetActive(false);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
-        }
-        else if (other.gameObject.CompareTag("iceScooper"))
-        {
-
-            itemList.Add("scoopIce");
-
-            //iceScooper.
-            iceScooper.GetComponent<iceScooperLogic>().hasIce = false;
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else

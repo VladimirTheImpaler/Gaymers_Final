@@ -17,6 +17,7 @@ public class iceScooperLogic : MonoBehaviour
     public GameObject cube6;
     public GameObject cube7;
     public GameObject cube8;
+    public GameObject gatePlate;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +38,10 @@ public class iceScooperLogic : MonoBehaviour
     void Update()
     {
 
-        cube4.GetComponent<Rigidbody>().isKinematic = false;
-        cube4.GetComponent<Rigidbody>().useGravity = true;
+        isPouring = GetComponent<PourOnRotate>().isPouring;
+
+        //cube4.GetComponent<Rigidbody>().isKinematic = false;
+        //cube4.GetComponent<Rigidbody>().useGravity = true;
 
         if (hasIce)
         {
@@ -57,10 +60,10 @@ public class iceScooperLogic : MonoBehaviour
             }
         }
 
-        isPouring = GetComponent<PourOnRotate>().isPouring;
-
         if (isPouring)
         {
+
+            gatePlate.SetActive(false);
 
             for (int i = 0; i < cubeList.Count; i++)
             {
@@ -68,6 +71,17 @@ public class iceScooperLogic : MonoBehaviour
                 cubeList[i].GetComponent<Rigidbody>().useGravity = true;
             }
             
+        }
+
+        //Delete Ice that falls below the bar
+        for (int i = 0; i < cubeList.Count; i++)
+        {
+            if (cubeList[i].GetComponent<Rigidbody>().position.y < 0)
+            {
+
+                cubeList[i].SetActive(false);
+            }
+
         }
 
     }

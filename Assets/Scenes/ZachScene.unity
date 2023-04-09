@@ -263,7 +263,7 @@ MonoBehaviour:
   walk3: {fileID: 2100000, guid: 98719b2271ca08b4aaa40f94d6305a1f, type: 2}
   walk4: {fileID: 2100000, guid: 9d6d53254993368469608680790a71f7, type: 2}
   randomOrderableItem: 
-  speed: 7
+  speed: 15
   atBarPos: -6
   startingPos: -15
   leavingBarX: 2
@@ -280,6 +280,7 @@ MonoBehaviour:
   - Keg Liquid
   - Apple Juice
   orderComplete: 0
+  arrivedAtBar: 0
 --- !u!114 &18477824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,7 +701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e1f7653c2994fc47b07d1162019fb0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.46300006
+      value: -0.434
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9e1f7653c2994fc47b07d1162019fb0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -769,6 +770,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9e1f7653c2994fc47b07d1162019fb0e, type: 3}
       propertyPath: m_Name
       value: cup
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e1f7653c2994fc47b07d1162019fb0e, type: 3}
+      propertyPath: m_TagString
+      value: cupParent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e1f7653c2994fc47b07d1162019fb0e, type: 3}
@@ -3966,6 +3971,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &456858310 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4453097446897935129, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+  m_PrefabInstance: {fileID: 2760313278093017800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &473151039
 GameObject:
   m_ObjectHideFlags: 0
@@ -5822,6 +5838,17 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 6897091781413558236, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
   m_PrefabInstance: {fileID: 2760313278093017800}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &724169313 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4944996657253467348, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+  m_PrefabInstance: {fileID: 2760313278093017800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &726308092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8530,6 +8557,17 @@ Transform:
   m_Father: {fileID: 434819276}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038401239 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2340985773085663877, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+  m_PrefabInstance: {fileID: 2760313278093017800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1064154095
 GameObject:
   m_ObjectHideFlags: 0
@@ -9057,6 +9095,17 @@ RectTransform:
   m_AnchoredPosition: {x: -53, y: -86}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
+--- !u!114 &1118431563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4144659512115307480, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+  m_PrefabInstance: {fileID: 2760313278093017800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1129876291
 GameObject:
   m_ObjectHideFlags: 0
@@ -10228,6 +10277,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 101548, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   m_PrefabInstance: {fileID: 1257935530}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1269999152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4225864276807810374, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+  m_PrefabInstance: {fileID: 2760313278093017800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1287406305
 GameObject:
   m_ObjectHideFlags: 0
@@ -15035,6 +15095,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2995318946951226725, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2995318946951226725, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient1Toggle
+      objectReference: {fileID: 0}
     - target: {fileID: 3066937726458831712, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
       propertyPath: m_Name
       value: chalkboard
@@ -15043,9 +15111,33 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3066937726458831712, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_TagString
+      value: chalkboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340727502590574769, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient3Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453097446897935129, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5962557403502771464, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient4Toggle
+      objectReference: {fileID: 0}
     - target: {fileID: 7514833330096074017, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974423237881572759, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient5Toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8413987406612322004, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: m_TagString
+      value: Ingredient2Toggle
       objectReference: {fileID: 0}
     - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
       propertyPath: Customer
@@ -15056,9 +15148,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: cupPropertyList
+      value: 
+      objectReference: {fileID: 1960931923}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
       propertyPath: chalkboardCanvas
       value: 
       objectReference: {fileID: 717043425}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: orderCompleteBox
+      value: 
+      objectReference: {fileID: 1492558617}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: Ingredient1Toggle
+      value: 
+      objectReference: {fileID: 456858310}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: Ingredient2Toggle
+      value: 
+      objectReference: {fileID: 1038401239}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: Ingredient3Toggle
+      value: 
+      objectReference: {fileID: 1269999152}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: Ingredient4Toggle
+      value: 
+      objectReference: {fileID: 1118431563}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: Ingredient5Toggle
+      value: 
+      objectReference: {fileID: 724169313}
     - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
       propertyPath: orderAndIngredients
       value: 

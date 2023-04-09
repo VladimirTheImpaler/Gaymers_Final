@@ -15,6 +15,13 @@ TagManager:
   - apple
   - appleJuice
   - iceBucket
+  - chalkboard
+  - Ingredient1Toggle
+  - Ingredient2Toggle
+  - Ingredient3Toggle
+  - Ingredient4Toggle
+  - Ingredient5Toggle
+  - cupParent
   layers:
   - Default
   - TransparentFX

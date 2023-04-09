@@ -36,7 +36,7 @@ public class CustomerController : MonoBehaviour
     public List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice" };
 
     public bool orderComplete;
-    private bool arrivedAtBar;
+    public bool arrivedAtBar;
     private bool displayedOrder;
 
     private void Start()
@@ -69,10 +69,8 @@ public class CustomerController : MonoBehaviour
         // Displays the customer's order once they arrive at the bar
         if ((int)transform.position.z == atBarPos)
         {
-            Debug.Log("Hello");
             if (!displayedOrder)
             {
-                Debug.Log("there");
                 displayedOrder = true;
                 arrivedAtBar = true;
 
@@ -122,6 +120,9 @@ public class CustomerController : MonoBehaviour
 
         if (orderComplete && arrivedAtBar)
         {
+            customerOrderText.enabled = false;
+            ingredientsListText.enabled = false;
+
             float xNew = transform.position.x +
                     -1 * speed * Time.deltaTime;
 
@@ -134,8 +135,7 @@ public class CustomerController : MonoBehaviour
                 orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete = false;
                 displayedOrder = false;
                 transform.position = new Vector3(2, 4f, -20);
-                customerOrderText.enabled = false;
-                ingredientsListText.enabled = false;
+                randomOrderableItem = string.Empty;
                 cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
             }
         }

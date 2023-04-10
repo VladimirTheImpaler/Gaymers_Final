@@ -6,6 +6,7 @@ public class juicerColiderLogic : MonoBehaviour
 {
 
     public GameObject appleJuice;
+    public GameObject juicerSpawnSphere;
     public bool fullyCrushed = false;
     public Vector3 objectSpawnlocation = new Vector3(2.2f, 4f, 1.4f);
 
@@ -21,6 +22,7 @@ public class juicerColiderLogic : MonoBehaviour
     void Update()
     {
 
+        objectSpawnlocation = juicerSpawnSphere.GetComponent<Rigidbody>().position;
         spawnJuice();
     }
 

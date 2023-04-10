@@ -8562,6 +8562,7 @@ GameObject:
   - component: {fileID: 1017318757}
   - component: {fileID: 1017318759}
   - component: {fileID: 1017318758}
+  - component: {fileID: 1017318760}
   m_Layer: 0
   m_Name: initialShadingGroup_closet_closetTop
   m_TagString: Untagged
@@ -8633,6 +8634,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017318756}
+  m_Mesh: {fileID: -2050126772576756025, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
+--- !u!64 &1017318760
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017318756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2050126772576756025, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
 --- !u!1 &1019838917
 GameObject:
@@ -10848,6 +10863,7 @@ GameObject:
   - component: {fileID: 1312581338}
   - component: {fileID: 1312581340}
   - component: {fileID: 1312581339}
+  - component: {fileID: 1312581341}
   m_Layer: 0
   m_Name: initialShadingGroup_closet_main
   m_TagString: Untagged
@@ -10919,6 +10935,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312581337}
+  m_Mesh: {fileID: 3617169889083135470, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
+--- !u!64 &1312581341
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312581337}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 3617169889083135470, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
 --- !u!1 &1315776444
 GameObject:
@@ -13391,6 +13421,7 @@ GameObject:
   - component: {fileID: 1539881626}
   - component: {fileID: 1539881628}
   - component: {fileID: 1539881627}
+  - component: {fileID: 1539881629}
   m_Layer: 0
   m_Name: initialShadingGroup_closet_door
   m_TagString: Untagged
@@ -13462,6 +13493,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539881625}
+  m_Mesh: {fileID: -3925670260846503901, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
+--- !u!64 &1539881629
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539881625}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3925670260846503901, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
 --- !u!1001 &1556597567
 PrefabInstance:
@@ -16093,6 +16138,7 @@ GameObject:
   - component: {fileID: 1831138384}
   - component: {fileID: 1831138386}
   - component: {fileID: 1831138385}
+  - component: {fileID: 1831138387}
   m_Layer: 0
   m_Name: initialShadingGroup_topShelf_closet
   m_TagString: Untagged
@@ -16164,6 +16210,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831138383}
+  m_Mesh: {fileID: 4551938596970051543, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
+--- !u!64 &1831138387
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831138383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4551938596970051543, guid: d5371bb0cf1aab34b9b507acdc626535, type: 3}
 --- !u!1 &1836801671 stripped
 GameObject:

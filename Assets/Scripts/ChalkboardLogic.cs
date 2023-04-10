@@ -70,7 +70,7 @@ public class ChalkboardLogic : MonoBehaviour
             switch (randomOrderableItem)
             {
                 case "Purple Ice":
-                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[0]} \n    {ingredients[1]}";                    
+                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[0]} \n    {ingredients[1]}";
                     Ingredient1ToggleObject.SetActive(true);
                     Ingredient2ToggleObject.SetActive(true);
                     break;
@@ -89,12 +89,6 @@ public class ChalkboardLogic : MonoBehaviour
 
             chalkboardCanvas.enabled = true;
             displayedOrder = true;
-
-            /*GameObject addedChild = (GameObject)Instantiate(togglePrefab);
-            addedChild.transform.SetParent(toggleContainer);
-
-            Text text = addedChild.GetComponentInChildren<Text>();
-            text.text = displayedTitle;*/
         }
 
         // Logic for ingredient checkboxes

@@ -109,7 +109,7 @@ public class CustomerController : MonoBehaviour
                 }
 
                 customerOrderText.enabled = true;
-                ingredientsListText.enabled = true;
+                // ingredientsListText.enabled = true;
             }            
         }
 

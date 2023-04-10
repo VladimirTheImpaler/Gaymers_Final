@@ -8,6 +8,7 @@ public class bottleScript : MonoBehaviour
     public GameObject spawnSphere;
     public GameObject liquidDrop;
     public Vector3 objectSpawnlocation;
+
     public bool isPouring = false;
 
     int timer = 10;

@@ -87,7 +87,7 @@ public class iceScooperLogic : MonoBehaviour
         if (hasIce)
         {
 
-            for(int i = 0; i < cubeList.Count; i++)
+            for (int i = 0; i < cubeList.Count; i++)
             {
                 cubeList[i].SetActive(true);
             }
@@ -111,7 +111,7 @@ public class iceScooperLogic : MonoBehaviour
                 cubeList[i].GetComponent<Rigidbody>().isKinematic = false;
                 cubeList[i].GetComponent<Rigidbody>().useGravity = true;
             }
-            
+
         }
 
         //Delete Ice that falls below the bar
@@ -143,10 +143,11 @@ public class iceScooperLogic : MonoBehaviour
         }
         else
         {
-        
+
             other.gameObject.SetActive(true);
         }
-    }
+    }   
+    
 
     public void respawnIce()
     {

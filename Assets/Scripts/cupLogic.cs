@@ -51,7 +51,7 @@ public class cupLogic : MonoBehaviour
         }
         else
         {
-            other.gameObject.SetActive(true);
+            //other.gameObject.SetActive(true);
         }
 
     }

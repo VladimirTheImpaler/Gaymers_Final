@@ -22,6 +22,7 @@ TagManager:
   - Ingredient4Toggle
   - Ingredient5Toggle
   - cupParent
+  - iceShard
   layers:
   - Default
   - TransparentFX

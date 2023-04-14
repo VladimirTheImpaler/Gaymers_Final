@@ -5,7 +5,8 @@ using UnityEngine;
 public class iceScooperLogic : MonoBehaviour
 {
 
-    public bool respawnButton; 
+    public bool respawnButton;
+    public int respawnTimer = 0;
 
     public List<GameObject> cubeList = new List<GameObject>();
     public List<Vector3> cubePosList = new List<Vector3>();
@@ -67,13 +68,21 @@ public class iceScooperLogic : MonoBehaviour
     void Update()
     {
         iceScoopPos = GetComponent<Rigidbody>().position;
-
         isPouring = GetComponent<PourOnRotate>().isPouring;
+        respawnTimer += 1;
 
         if (respawnButton)
         {
             respawnIce();
         }
+
+        if (respawnTimer == 0)
+        {
+
+            respawnIce();
+            hasIce = false;
+        }
+
 
         if (hasIce)
         {
@@ -95,6 +104,7 @@ public class iceScooperLogic : MonoBehaviour
         if (isPouring)
         {
 
+            respawnTimer = -200;
 
             for (int i = 0; i < cubeList.Count; i++)
             {

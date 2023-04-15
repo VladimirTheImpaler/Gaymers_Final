@@ -9,9 +9,9 @@ public class CustomerController : MonoBehaviour
     public GameObject orderCompleteBox;
     public GameObject cupPropertyList;
     public GameObject customer;
+    public GameObject speechBubble;
 
     public TextMeshProUGUI customerOrderText;
-    public TextMeshProUGUI ingredientsListText;
 
     public Material walk1;
     public Material walk2;
@@ -45,7 +45,7 @@ public class CustomerController : MonoBehaviour
         displayedOrder = false;
         transform.position = new Vector3(2, 4f, -20);
         customerOrderText.enabled = false;
-        ingredientsListText.enabled = false;
+        speechBubble.SetActive(false);
     }
 
     void Update()
@@ -95,19 +95,7 @@ public class CustomerController : MonoBehaviour
                         break;
                 }
 
-                switch (randomOrderableItem)
-                {
-                    case "Purple Ice":
-                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[0]} \n 2. {ingredients[1]}";
-                        break;
-                    case "Liquid Apple":
-                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[1]} \n 2. {ingredients[2]}";
-                        break;
-                    case "Cube Juice":
-                        ingredientsListText.text = $"{randomOrderableItem}: \n 1. {ingredients[2]} \n 2. {ingredients[0]} \n 3. {ingredients[1]}";
-                        break;
-                }
-
+                speechBubble.SetActive(true);
                 customerOrderText.enabled = true;
                 //ingredientsListText.enabled = true;
             }            
@@ -121,7 +109,7 @@ public class CustomerController : MonoBehaviour
         if (orderComplete && arrivedAtBar)
         {
             customerOrderText.enabled = false;
-            ingredientsListText.enabled = false;
+            speechBubble.SetActive(false);
 
             float xNew = transform.position.x +
                     -1 * speed * Time.deltaTime;

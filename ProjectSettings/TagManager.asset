@@ -25,6 +25,7 @@ TagManager:
   - iceShard
   - broom
   - juicerFreezeBlock
+  - imposter
   layers:
   - Default
   - TransparentFX

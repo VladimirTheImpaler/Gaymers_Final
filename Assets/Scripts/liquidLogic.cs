@@ -5,7 +5,8 @@ using UnityEngine;
 public class liquidLogic : MonoBehaviour
 {
 
-    public int life = 5000;
+    public int life = 4000;
+    public bool stuck = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,11 @@ public class liquidLogic : MonoBehaviour
     void Update()
     {
 
-        this.life -= 1;
+        if (!(this.gameObject.GetComponent<ObjectPosition>().currentPosition.y < -3.6f))
+        {
+
+            this.life -= 1;
+        }
 
         if (this.life < 0)
         {
@@ -27,4 +32,30 @@ public class liquidLogic : MonoBehaviour
         }
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.CompareTag("broom"))
+        {
+
+            this.gameObject.SetActive(false);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+
+        }else if (other.gameObject.CompareTag("juicerFreezeBlock"))
+        {
+            stuck = true;
+            this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            this.life = 99999999;
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        }
+        else
+        {
+            stuck = false;
+            //other.gameObject.SetActive(true);
+        }
+    }
+
+
+
 }

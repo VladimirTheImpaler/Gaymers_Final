@@ -37,6 +37,7 @@ public class CustomerController : MonoBehaviour
 
     public bool orderComplete;
     public bool arrivedAtBar;
+    public bool spawnImposterNext = true;
     private bool displayedOrder;
 
     private void Start()
@@ -134,16 +135,16 @@ public class CustomerController : MonoBehaviour
         switch (materialIndex)
         {
             case 0:
-                customer.GetComponent<MeshRenderer>().material = walk1;
+                this.gameObject.GetComponent<MeshRenderer>().material = walk1;
                 break;
             case 1:
-                customer.GetComponent<MeshRenderer>().material = walk2;
+                this.gameObject.GetComponent<MeshRenderer>().material = walk2;
                 break;
             case 2:
-                customer.GetComponent<MeshRenderer>().material = walk3;
+                this.gameObject.GetComponent<MeshRenderer>().material = walk3;
                 break;
             case 3:
-                customer.GetComponent<MeshRenderer>().material = walk4;
+                this.gameObject.GetComponent<MeshRenderer>().material = walk4;
                 materialIndex = -1;
                 break;
         }

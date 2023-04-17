@@ -23,6 +23,8 @@ TagManager:
   - Ingredient5Toggle
   - cupParent
   - iceShard
+  - broom
+  - juicerFreezeBlock
   layers:
   - Default
   - TransparentFX

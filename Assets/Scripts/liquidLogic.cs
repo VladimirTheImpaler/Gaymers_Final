@@ -5,24 +5,21 @@ using UnityEngine;
 public class liquidLogic : MonoBehaviour
 {
 
-    public int life = 4000;
+    public int life;
     public bool stuck = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        life = 4000;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (!(this.gameObject.GetComponent<ObjectPosition>().currentPosition.y < -3.6f))
-        {
-
-            this.life -= 1;
-        }
+        this.life -= 1;
 
         if (this.life < 0)
         {
@@ -38,6 +35,7 @@ public class liquidLogic : MonoBehaviour
 
         if (other.gameObject.CompareTag("broom"))
         {
+
 
             this.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);

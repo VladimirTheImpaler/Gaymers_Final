@@ -144,7 +144,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 4000
-  stuck: 1
+  stuck: 0
+  liquidFreezeCube: {fileID: 100086, guid: 5b1b3324d9af1db498a8cb294cc8d274, type: 3}
 --- !u!114 &982370820892610163
 MonoBehaviour:
   m_ObjectHideFlags: 0

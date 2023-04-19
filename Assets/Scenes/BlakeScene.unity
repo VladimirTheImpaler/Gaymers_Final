@@ -10636,6 +10636,7 @@ MonoBehaviour:
   - Apple Juice
   orderComplete: 0
   arrivedAtBar: 0
+  spawnImposterNext: 1
 --- !u!114 &1071036100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13551,6 +13552,7 @@ MonoBehaviour:
   appleJuice: {fileID: 7721398975577265993, guid: 86298ff4e5a55bc45a2ea8cfea239b45, type: 3}
   juicerSpawnSphere: {fileID: 1633853759}
   fullyCrushed: 1
+  timer: 2
   juicerSpawnSpherelocation: {x: 0, y: 0, z: 0}
   itemList: []
 --- !u!64 &1343513846
@@ -17622,6 +17624,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1806524385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806524378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d1c866acc5bab044bed340199529ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crankThatHog: 0
+  juicerIsJuicing: 0
 --- !u!1 &1815698246
 GameObject:
   m_ObjectHideFlags: 0

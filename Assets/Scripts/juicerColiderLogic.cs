@@ -7,6 +7,7 @@ public class juicerColiderLogic : MonoBehaviour
 
     public GameObject appleJuice;
     public GameObject juicerSpawnSphere;
+    public GameObject juicerHandle;
     public bool fullyCrushed = false;
     public int timer = 2;
     public Vector3 juicerSpawnSpherelocation;
@@ -26,6 +27,8 @@ public class juicerColiderLogic : MonoBehaviour
 
         juicerSpawnSpherelocation = juicerSpawnSphere.GetComponent<Rigidbody>().position;
         spawnJuice();
+
+        fullyCrushed = juicerHandle.GetComponent<CrankRotation>().juicerIsJuicing;
     }
 
     public void spawnJuice()

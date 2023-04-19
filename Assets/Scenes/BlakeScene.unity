@@ -10575,6 +10575,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037096909}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1063229511 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8534284517123837971, guid: 01c0d92c6f630d049bf7bb43c379b8fb, type: 3}
+  m_PrefabInstance: {fileID: 451433090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1063229515
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1063229511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4838516647439735585, guid: 01c0d92c6f630d049bf7bb43c379b8fb, type: 3}
 --- !u!1 &1071036098
 GameObject:
   m_ObjectHideFlags: 0
@@ -13551,6 +13570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appleJuice: {fileID: 7721398975577265993, guid: 86298ff4e5a55bc45a2ea8cfea239b45, type: 3}
   juicerSpawnSphere: {fileID: 1633853759}
+  juicerHandle: {fileID: 0}
   fullyCrushed: 1
   timer: 2
   juicerSpawnSpherelocation: {x: 0, y: 0, z: 0}

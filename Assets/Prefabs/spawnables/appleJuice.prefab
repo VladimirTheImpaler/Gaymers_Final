@@ -112,8 +112,8 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7721398975577265993}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
+  m_IsTrigger: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -126,7 +126,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7721398975577265993}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -145,7 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 4000
   stuck: 0
-  liquidFreezeCube: {fileID: 100086, guid: 5b1b3324d9af1db498a8cb294cc8d274, type: 3}
 --- !u!114 &982370820892610163
 MonoBehaviour:
   m_ObjectHideFlags: 0

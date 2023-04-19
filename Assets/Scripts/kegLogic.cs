@@ -9,7 +9,7 @@ public class kegLogic : MonoBehaviour
     public GameObject liquidDrop;
     public Vector3 objectSpawnlocation;
 
-    int timer = 10;
+    int timer = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class kegLogic : MonoBehaviour
         if (timer < 0)
         {
 
-        timer = 10;
+        timer = 2;
         //summon liquidBall
         GameObject newLiquid = Instantiate(liquidDrop, objectSpawnlocation, Quaternion.identity) as GameObject;
         }

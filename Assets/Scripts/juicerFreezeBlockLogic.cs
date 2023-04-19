@@ -25,7 +25,7 @@ public class juicerFreezeBlockLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.CompareTag("appleJuice"))
+        if (other.gameObject.CompareTag("appleJuice") || other.gameObject.CompareTag("kegLiquid"))
         {
 
             numLiquid += 1;

@@ -12,7 +12,7 @@ public class liquidLogic : MonoBehaviour
     void Start()
     {
 
-        life = 4000;
+        life = 100;
     }
 
     // Update is called once per frame

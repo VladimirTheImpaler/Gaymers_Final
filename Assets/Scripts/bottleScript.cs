@@ -10,8 +10,8 @@ public class bottleScript : MonoBehaviour
     public Vector3 objectSpawnlocation;
 
     public bool isPouring = false;
-
-    int timer = 10;
+    public int spawnAmount = 1;
+    int timer = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class bottleScript : MonoBehaviour
         if (timer < 0)
         {
 
-            timer = 10;
+            timer = 2;
             //summon liquidBall
             GameObject newLiquid = Instantiate(liquidDrop, objectSpawnlocation, Quaternion.identity) as GameObject;
         }
@@ -44,7 +44,10 @@ public class bottleScript : MonoBehaviour
         isPouring = GetComponent<PourOnRotate>().isPouring;
 
         if (isPouring) {
-            spawnBall();
+            for (int i = 0; i < spawnAmount; i++)
+            {
+                spawnBall();
+            }
         }
         
     }

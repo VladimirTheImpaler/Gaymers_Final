@@ -10,13 +10,11 @@ public class bottleScript : MonoBehaviour
     public Vector3 objectSpawnlocation;
 
     public bool isPouring = false;
-    public int spawnAmount = 1;
     int timer = 2;
 
     // Start is called before the first frame update
     void Start()
     {
-
 
     }
 
@@ -40,14 +38,11 @@ public class bottleScript : MonoBehaviour
     void Update()
     {
 
-
         isPouring = GetComponent<PourOnRotate>().isPouring;
 
-        if (isPouring) {
-            for (int i = 0; i < spawnAmount; i++)
-            {
-                spawnBall();
-            }
+        if (isPouring) 
+        {
+            spawnBall();
         }
         
     }

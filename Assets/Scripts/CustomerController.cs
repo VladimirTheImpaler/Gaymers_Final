@@ -33,7 +33,6 @@ public class CustomerController : MonoBehaviour
     public float endingZ = -12f;
     public float xStart = -10f;
     public float zStart = -5f;
-    private int direction = 1;
     private int materialIndex = 0;
     public float delay = .2f;
     float timer;
@@ -59,31 +58,15 @@ public class CustomerController : MonoBehaviour
 
     void Update()
     {
-        if (!isImposterRound)
-        {
-            CustomerWalkAnimation();
+        CustomerWalkAnimation();
 
-            MoveToBar();
+        MoveToBar();
 
-            DisplayOrder();
+        DisplayOrder();
 
-            CheckOrderComplete();
+        CheckOrderComplete();
 
-            MovementAfterComplete();
-        }
-        else
-        {
-            CustomerWalkAnimation();
-
-            MoveToBar();
-
-            DisplayOrder();
-
-            CheckOrderComplete();
-
-            MovementAfterComplete();
-        }
-        
+        MovementAfterComplete();
     }
 
     private void MovementAfterComplete()
@@ -99,8 +82,7 @@ public class CustomerController : MonoBehaviour
 
                 if (canMoveX)
                 {
-                    float xNew = transform.position.x +
-                        -1 * speed * Time.deltaTime;
+                    float xNew = transform.position.x + -1 * speed * Time.deltaTime;
 
                     transform.position = new Vector3(xNew, 4f, zStart);
                 }
@@ -109,7 +91,7 @@ public class CustomerController : MonoBehaviour
                     if (isMovingZ)
                     {
                         float zNew = transform.position.z +
-                                        (-1 * direction) * speed * Time.deltaTime;
+                                        (-1) * speed * Time.deltaTime;
 
                         transform.position = new Vector3(imposterEndingX, 4f, zNew);
                     }
@@ -154,8 +136,7 @@ public class CustomerController : MonoBehaviour
     {
         if (!arrivedAtBar && transform.position.z <= atBarPos)
         {
-            float zNew = transform.position.z +
-                        direction * speed * Time.deltaTime;
+            float zNew = transform.position.z + speed * Time.deltaTime;
 
             transform.position = new Vector3(xStart, 4f, zNew);
         }

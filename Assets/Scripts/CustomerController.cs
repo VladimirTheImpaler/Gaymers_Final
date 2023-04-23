@@ -69,59 +69,6 @@ public class CustomerController : MonoBehaviour
         MovementAfterComplete();
     }
 
-    private void MovementAfterComplete()
-    {
-        if (isImposterRound)
-        {
-            canMoveX = transform.position.x - 1 >= imposterEndingX;
-            isMovingZ = (int)transform.position.z != endingZ + 1;
-            if (orderComplete && arrivedAtBar)
-            {
-                customerOrderText.enabled = false;
-                speechBubble.SetActive(false);
-
-                if (canMoveX)
-                {
-                    float xNew = transform.position.x + -1 * speed * Time.deltaTime;
-
-                    transform.position = new Vector3(xNew, 4f, zStart);
-                }
-                else
-                {
-                    if (isMovingZ)
-                    {
-                        float zNew = transform.position.z +
-                                        (-1) * speed * Time.deltaTime;
-
-                        transform.position = new Vector3(imposterEndingX, 4f, zNew);
-                    }
-                    else
-                    {
-                        ResetForNextCustomer();
-                    }
-                }
-            }
-        }
-        else
-        {
-            if (orderComplete && arrivedAtBar)
-            {
-                customerOrderText.enabled = false;
-                speechBubble.SetActive(false);
-
-                float xNew = transform.position.x +
-                        -1 * speed * Time.deltaTime;
-
-                transform.position = new Vector3(xNew, 4f, zStart);
-
-                if ((int)transform.position.x == endingX)
-                {
-                    ResetForNextCustomer();
-                }
-            }
-        }
-    }
-
     private void CustomerWalkAnimation()
     {
         timer += Time.deltaTime;
@@ -132,6 +79,27 @@ public class CustomerController : MonoBehaviour
         }
     }
 
+    public void CustomerWalk()
+    {
+        switch (materialIndex)
+        {
+            case 0:
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk1;
+                break;
+            case 1:
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk2;
+                break;
+            case 2:
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk3;
+                break;
+            case 3:
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk4;
+                materialIndex = -1;
+                break;
+        }
+        materialIndex++;
+    }
+
     private void MoveToBar()
     {
         if (!arrivedAtBar && transform.position.z <= atBarPos)
@@ -139,26 +107,6 @@ public class CustomerController : MonoBehaviour
             float zNew = transform.position.z + speed * Time.deltaTime;
 
             transform.position = new Vector3(xStart, 4f, zNew);
-        }
-    }
-
-    private void ResetForNextCustomer()
-    {
-        arrivedAtBar = false;
-        orderComplete = false;
-        orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete = false;
-        displayedOrder = false;
-        transform.position = new Vector3(2, 4f, -20);
-        randomOrderableItem = string.Empty;
-        cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
-        isImposterRound = 3 == UnityEngine.Random.Range(1, 6);
-    }
-
-    private void CheckOrderComplete()
-    {
-        if (!orderComplete)
-        {
-            orderComplete = orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete;
         }
     }
 
@@ -221,24 +169,76 @@ public class CustomerController : MonoBehaviour
         }
     }
 
-    public void CustomerWalk()
+    private void CheckOrderComplete()
     {
-        switch (materialIndex)
+        if (!orderComplete)
         {
-            case 0:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk1;
-                break;
-            case 1:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk2;
-                break;
-            case 2:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk3;
-                break;
-            case 3:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk4;
-                materialIndex = -1;
-                break;
+            orderComplete = orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete;
         }
-        materialIndex++;
+    }
+
+    private void MovementAfterComplete()
+    {
+        if (isImposterRound)
+        {
+            canMoveX = transform.position.x - 1 >= imposterEndingX;
+            isMovingZ = (int)transform.position.z != endingZ + 1;
+            if (orderComplete && arrivedAtBar)
+            {
+                customerOrderText.enabled = false;
+                speechBubble.SetActive(false);
+
+                if (canMoveX)
+                {
+                    float xNew = transform.position.x + -1 * speed * Time.deltaTime;
+
+                    transform.position = new Vector3(xNew, 4f, zStart);
+                }
+                else
+                {
+                    if (isMovingZ)
+                    {
+                        float zNew = transform.position.z +
+                                        (-1) * speed * Time.deltaTime;
+
+                        transform.position = new Vector3(imposterEndingX, 4f, zNew);
+                    }
+                    else
+                    {
+                        ResetForNextCustomer();
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (orderComplete && arrivedAtBar)
+            {
+                customerOrderText.enabled = false;
+                speechBubble.SetActive(false);
+
+                float xNew = transform.position.x +
+                        -1 * speed * Time.deltaTime;
+
+                transform.position = new Vector3(xNew, 4f, zStart);
+
+                if ((int)transform.position.x == endingX)
+                {
+                    ResetForNextCustomer();
+                }
+            }
+        }
+    }
+
+    private void ResetForNextCustomer()
+    {
+        arrivedAtBar = false;
+        orderComplete = false;
+        orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete = false;
+        displayedOrder = false;
+        transform.position = new Vector3(2, 4f, -20);
+        randomOrderableItem = string.Empty;
+        cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
+        isImposterRound = 3 == UnityEngine.Random.Range(1, 6);
     }
 }

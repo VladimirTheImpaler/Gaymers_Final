@@ -10,6 +10,7 @@ public class ChalkboardLogic : MonoBehaviour
     public GameObject Customer;
     public GameObject orderCompleteBox;
     public GameObject cupPropertyList;
+
     public Toggle Ingredient1Toggle;
     public Toggle Ingredient2Toggle;
     public Toggle Ingredient3Toggle;
@@ -23,6 +24,7 @@ public class ChalkboardLogic : MonoBehaviour
     private GameObject Ingredient5ToggleObject;
 
     public TextMeshProUGUI orderAndIngredients;
+
     public Canvas chalkboardCanvas;
 
     private bool orderComplete;
@@ -30,11 +32,10 @@ public class ChalkboardLogic : MonoBehaviour
 
     private List<string> ingredients = new List<string>();
 
-
-    // Start is called before the first frame update
     void Start()
     {
         ingredients = Customer.GetComponent<CustomerController>().ingredients;
+
         Ingredient1ToggleObject = GameObject.FindWithTag("Ingredient1Toggle");
         Ingredient2ToggleObject = GameObject.FindWithTag("Ingredient2Toggle");
         Ingredient3ToggleObject = GameObject.FindWithTag("Ingredient3Toggle");
@@ -46,6 +47,7 @@ public class ChalkboardLogic : MonoBehaviour
         Ingredient3ToggleObject.SetActive(false);
         Ingredient4ToggleObject.SetActive(false);
         Ingredient5ToggleObject.SetActive(false);
+
         displayedOrder = false;
         chalkboardCanvas.enabled = false;
         Ingredient1Toggle.isOn = false;
@@ -55,7 +57,6 @@ public class ChalkboardLogic : MonoBehaviour
         Ingredient5Toggle.isOn = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         var randomOrderableItem = string.Empty;

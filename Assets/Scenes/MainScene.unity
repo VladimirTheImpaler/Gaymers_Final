@@ -814,9 +814,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 37190882}
     m_Modifications:
     - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
       propertyPath: speechBubble
       value: 
       objectReference: {fileID: 1757168751}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: imposterWalk1
+      value: 
+      objectReference: {fileID: 2100000, guid: 5e826b05835222e4ab7d34823dc78e67, type: 2}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: imposterWalk2
+      value: 
+      objectReference: {fileID: 2100000, guid: ce301f47292b50947bdabbb4715b7ebf, type: 2}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: imposterWalk3
+      value: 
+      objectReference: {fileID: 2100000, guid: 1105c30830182ad44857d3f7fb7d1c15, type: 2}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: imposterWalk4
+      value: 
+      objectReference: {fileID: 2100000, guid: 83d18b7ea34e8754d83a82a4147324d8, type: 2}
     - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
       propertyPath: cupPropertyList
       value: 
@@ -26677,7 +26697,7 @@ MonoBehaviour:
   hasIce: 0
   wallsActive: 0
   grabTimer: 0
-  wall1: {fileID: 0}
+  wallsParent: {fileID: 0}
 --- !u!4 &8988417911285637378
 Transform:
   m_ObjectHideFlags: 0

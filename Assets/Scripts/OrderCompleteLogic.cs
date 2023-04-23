@@ -28,27 +28,56 @@ public class OrderCompleteLogic : MonoBehaviour
         {
             var cupList = cupPropertyList.GetComponent<cupLogic>().itemList;
             var randomOrderableItem = customer.GetComponent<CustomerController>().randomOrderableItem;
-            switch (randomOrderableItem)
+            var isImposterRound = customer.GetComponent<CustomerController>().isImposterRound;
+            if (!isImposterRound)
             {
-                case "Purple Ice":
-                    if (cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
-                    {
-                        orderComplete = true;
-                    }
-                    break;
-                case "Liquid Apple":
-                    if (cupList.Contains("kegLiquid") && cupList.Contains("appleJuice"))
-                    {
-                        orderComplete = true;
-                    }
-                    break;
-                case "Cube Juice":
-                    if (cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
-                    {
-                        orderComplete = true;
-                    }
-                    break;
+                switch (randomOrderableItem)
+                {
+                    case "Purple Ice":
+                        if (cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
+                        {
+                            orderComplete = true;
+                        }
+                        break;
+                    case "Liquid Apple":
+                        if (cupList.Contains("kegLiquid") && cupList.Contains("appleJuice"))
+                        {
+                            orderComplete = true;
+                        }
+                        break;
+                    case "Cube Juice":
+                        if (cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid"))
+                        {
+                            orderComplete = true;
+                        }
+                        break;
+                }
             }
+            else
+            {
+                switch (randomOrderableItem)
+                {
+                    case "Purple Ice":
+                        if (cupList.Contains("iceCube") && cupList.Contains("kegLiquid") && cupList.Contains("poison"))
+                        {
+                            orderComplete = true;
+                        }
+                        break;
+                    case "Liquid Apple":
+                        if (cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains("poison"))
+                        {
+                            orderComplete = true;
+                        }
+                        break;
+                    case "Cube Juice":
+                        if (cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid") && cupList.Contains("poison"))
+                        {
+                            orderComplete = true;
+                        }
+                        break;
+                }
+            }
+            
         }
         
     }

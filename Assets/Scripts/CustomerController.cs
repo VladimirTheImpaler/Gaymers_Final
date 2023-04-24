@@ -87,13 +87,13 @@ public class CustomerController : MonoBehaviour
                 this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk1;
                 break;
             case 1:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk2;
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk2 : walk2;
                 break;
             case 2:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk3;
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk3 : walk3;
                 break;
             case 3:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk4;
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk4 : walk4;
                 materialIndex = -1;
                 break;
         }

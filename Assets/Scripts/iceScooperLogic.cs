@@ -8,14 +8,14 @@ public class iceScooperLogic : MonoBehaviour
     public GameObject spawnObject;
     public GameObject iceCube;
     public Vector3 objectSpawnlocation;
+    public GameObject wallGate;
 
-    public bool dropped = true;
     public bool isPouring = false;
-    public bool hasIce = false;
-    public bool wallsActive = true;
-    public int grabTimer = 0;
+    public int grabTimer = 400;
 
     public GameObject wallsParent;
+
+    public bool iceSpawnReady = false;
 
 
 
@@ -28,60 +28,50 @@ public class iceScooperLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        isPouring = GetComponent<PourOnRotate>().isPouring;
-        spawnIce();
-
-
-        if (!wallsActive)
-        {
-            wallsParent.SetActive(false);
-        }
-        else
-        {
-            wallsParent.SetActive(true);
-        }
-
-        if (grabTimer < 0)
-        {
-            wallsActive = false;
-        }
-        else
-        {
-            wallsActive = true;
-        }
-
-    }
-
-    public void grabbed()
-    {
-
-        grabTimer = 100;
-        dropped = false;
-    }
-
-    public void ungrabbed()
-    {
-
-        grabTimer = 100;
-        dropped = true;
-    }
-    public void inHand()
-    {
 
         grabTimer -= 1;
-        dropped = true;
+
+        isPouring = GetComponent<PourOnRotate>().isPouring;
+
+        wallGate.GetComponent<MeshCollider>().enabled = false;
+
+        if (grabTimer > 0)
+        {
+
+            wallGate.gameObject.SetActive(true);
+        }
+        else
+        {
+
+            wallGate.gameObject.SetActive(false);
+        }
+        
+    }
+
+
+    public void pickedUP()
+    {
+
+        grabTimer = 400;
+    }
+
+    public void dropped()
+    {
+
+        iceSpawnReady = true;
     }
 
     public void spawnIce()
     {
-        if (dropped)
-        {
 
-        }
         objectSpawnlocation = spawnObject.GetComponent<Rigidbody>().position;
 
-        GameObject newIce = Instantiate(iceCube, objectSpawnlocation, Quaternion.identity) as GameObject;
+        if ((grabTimer > 0) && (iceSpawnReady))
+        {
+
+            GameObject newIce = Instantiate(iceCube, objectSpawnlocation, Quaternion.identity) as GameObject;
+            iceSpawnReady = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

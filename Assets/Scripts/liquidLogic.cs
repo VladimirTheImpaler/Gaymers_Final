@@ -7,6 +7,8 @@ public class liquidLogic : MonoBehaviour
 
     public int life;
     public bool stuck = false;
+    public AudioClip cleaning_SFX;
+    public AudioClip floorDrop_SFX;
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +40,14 @@ public class liquidLogic : MonoBehaviour
 
 
             this.gameObject.SetActive(false);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+            AudioSource.PlayClipAtPoint(cleaning_SFX, transform.position);
 
         }else if (other.gameObject.CompareTag("juicerFreezeBlock"))
         {
             stuck = true;
             this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             this.life = 99999999;
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+            AudioSource.PlayClipAtPoint(floorDrop_SFX, transform.position);
         }
         else
         {

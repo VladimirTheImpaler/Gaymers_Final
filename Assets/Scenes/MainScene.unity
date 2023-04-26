@@ -7338,7 +7338,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 185
+  Priority: 51
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -18074,7 +18074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iceCube: {fileID: 7721398975577265993, guid: 05eb09878424e7b4cbb5686f203393fe, type: 3}
   objectSpawnlocation: {x: 5.5, y: 4.5, z: 0}
-  iceSpawn_SFX: {fileID: 0}
+  iceSpawn_SFX: {fileID: 8300000, guid: 642df383fe4556444be5c7f4428c1d8b, type: 3}
 --- !u!64 &1257183970
 MeshCollider:
   m_ObjectHideFlags: 0

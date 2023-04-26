@@ -6,6 +6,7 @@ public class iceBlockLogic : MonoBehaviour
 {
     public GameObject iceCube;
     public Vector3 objectSpawnlocation = new Vector3(5.5f, 4.5f, 0.5f);
+    public AudioClip iceSpawn_SFX;
 
     int timer = 10;
     bool useAble = false;
@@ -25,6 +26,7 @@ public class iceBlockLogic : MonoBehaviour
 
             timer = 10;
             GameObject newIce = Instantiate(iceCube, objectSpawnlocation, Quaternion.identity) as GameObject;
+            AudioSource.PlayClipAtPoint(iceSpawn_SFX, transform.position);
         }
 
     }

@@ -10,10 +10,7 @@ public class cupLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        itemList.Add("iceCube");
-        itemList.Add("kegLiquid");
-        itemList.Add("appleJuice");
-        itemList.Add("poison");
+
     }
 
     // Update is called once per frame

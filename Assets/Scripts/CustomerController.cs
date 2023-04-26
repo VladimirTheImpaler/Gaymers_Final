@@ -42,7 +42,7 @@ public class CustomerController : MonoBehaviour
 
     public bool orderComplete;
     public bool arrivedAtBar;
-    public bool isImposterRound = true;
+    public bool isImposterRound;
     private bool displayedOrder;
     private bool canMoveX;
     private bool isMovingZ;

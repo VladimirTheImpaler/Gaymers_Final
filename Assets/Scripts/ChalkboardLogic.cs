@@ -10,6 +10,7 @@ public class ChalkboardLogic : MonoBehaviour
     public GameObject Customer;
     public GameObject orderCompleteBox;
     public GameObject cupPropertyList;
+    public GameObject floorMat;
 
     public Toggle Ingredient1Toggle;
     public Toggle Ingredient2Toggle;
@@ -24,6 +25,8 @@ public class ChalkboardLogic : MonoBehaviour
     private GameObject Ingredient5ToggleObject;
 
     public TextMeshProUGUI orderAndIngredients;
+    public TextMeshProUGUI tipsText;
+    public TextMeshProUGUI choresText;
 
     public Canvas chalkboardCanvas;
 
@@ -50,6 +53,8 @@ public class ChalkboardLogic : MonoBehaviour
 
         displayedOrder = false;
         chalkboardCanvas.enabled = false;
+        tipsText.text = $"\n<u>Tips</u>\n  $0.00";
+        choresText.text = "\n<u>Chores</u>";
         Ingredient1Toggle.isOn = false;
         Ingredient2Toggle.isOn = false;
         Ingredient3Toggle.isOn = false;
@@ -60,6 +65,14 @@ public class ChalkboardLogic : MonoBehaviour
     void Update()
     {
         var randomOrderableItem = string.Empty;
+
+        if (floorMat.GetComponent<juicerFreezeBlockLogic>().hasJuice)
+        {
+            choresText.text = "\n<u>Chores</u>\n* Sweep";
+        } else
+        {
+            choresText.text = "\n<u>Chores</u>";
+        }
 
         if (Customer.GetComponent<CustomerController>().arrivedAtBar)
         {

@@ -914,6 +914,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 332064997341175616, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 122822126}
     - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
       propertyPath: speed
       value: 5
@@ -2754,6 +2758,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+--- !u!1 &122822126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 121078, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 122822125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &126675550
 GameObject:
   m_ObjectHideFlags: 0
@@ -6826,6 +6835,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 604961995}
     - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: floorMat
+      value: 
+      objectReference: {fileID: 851283574}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: tipsText
+      value: 
+      objectReference: {fileID: 475445020}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+      propertyPath: choresText
+      value: 
+      objectReference: {fileID: 475445019}
+    - target: {fileID: 9219277270960734152, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
       propertyPath: displayedOrder
       value: 0
       objectReference: {fileID: 0}
@@ -6872,6 +6893,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3066937726458831712, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
   m_PrefabInstance: {fileID: 475445017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &475445019 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7411381701939932407, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+  m_PrefabInstance: {fileID: 475445017}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &475445020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7697897505299365020, guid: 5197dc0595ff9184c8376c07c51b674a, type: 3}
+  m_PrefabInstance: {fileID: 475445017}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &479603156
 GameObject:
   m_ObjectHideFlags: 0
@@ -19435,6 +19478,8 @@ MonoBehaviour:
   cupPropertyList: {fileID: 1847144384}
   customer: {fileID: 0}
   cup: {fileID: 954776337}
+  tipsText: {fileID: 0}
+  tipsTotal: 0
   orderComplete: 0
 --- !u!64 &1315776447
 MeshCollider:
@@ -33496,10 +33541,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb1d0ff2b9ca89409fbae6118d43fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iceScooperParent: {fileID: 0}
   spawnObject: {fileID: 1352116611}
   iceCube: {fileID: 7721398975577265993, guid: 05eb09878424e7b4cbb5686f203393fe, type: 3}
   objectSpawnlocation: {x: 0, y: 0, z: 0}
   wallGate: {fileID: 0}
+  tempIceCube: {fileID: 0}
   isPouring: 0
   grabTimer: 0
   wallsParent: {fileID: 0}

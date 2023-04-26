@@ -144,3 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 100
   stuck: 0
+  cleaning_SFX: {fileID: 0}
+  floorDrop_SFX: {fileID: 0}

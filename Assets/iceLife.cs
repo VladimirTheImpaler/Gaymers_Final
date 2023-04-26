@@ -12,7 +12,7 @@ public class iceLife : MonoBehaviour
     {
 
 
-        this.iceLifeNum = 1000;
+        this.iceLifeNum = 10000;
     }
 
     // Update is called once per frame

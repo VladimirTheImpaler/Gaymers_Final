@@ -26,6 +26,7 @@ TagManager:
   - broom
   - juicerFreezeBlock
   - imposter
+  - poison
   layers:
   - Default
   - TransparentFX

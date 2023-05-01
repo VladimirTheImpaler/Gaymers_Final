@@ -9,13 +9,14 @@ public class iceScooperLogic : MonoBehaviour
     public GameObject iceCube;
     public Vector3 objectSpawnlocation;
     public GameObject wallGate;
+    public GameObject tempIceCube;
+    public GameObject iceScooper;
 
     public bool isPouring = false;
-    public int grabTimer = 400;
 
     public GameObject wallsParent;
 
-    public bool iceSpawnReady = false;
+    public bool iceSpawnReady;
 
 
 
@@ -29,22 +30,10 @@ public class iceScooperLogic : MonoBehaviour
     void Update()
     {
 
-        grabTimer -= 1;
 
-        isPouring = GetComponent<PourOnRotate>().isPouring;
+        isPouring = GetComponent<SCPR_PourOnRotate>().isPouring;
 
         wallGate.GetComponent<MeshCollider>().enabled = false;
-
-        if (grabTimer > 0)
-        {
-
-            wallGate.gameObject.SetActive(true);
-        }
-        else
-        {
-
-            wallGate.gameObject.SetActive(false);
-        }
         
     }
 
@@ -52,21 +41,27 @@ public class iceScooperLogic : MonoBehaviour
     public void pickedUP()
     {
 
-        grabTimer = 400;
+        iceScooper.GetComponent<Rigidbody>().useGravity = false;
+        tempIceCube.gameObject.SetActive(true);
+        iceSpawnReady = true;
     }
 
     public void dropped()
     {
 
+        iceScooper.GetComponent<Rigidbody>().useGravity = true;
+        tempIceCube.gameObject.SetActive(false);
         iceSpawnReady = true;
     }
 
     public void spawnIce()
     {
 
+        tempIceCube.gameObject.SetActive(false);
+
         objectSpawnlocation = spawnObject.GetComponent<Rigidbody>().position;
 
-        if ((grabTimer > 0) && (iceSpawnReady))
+        if (iceSpawnReady && isPouring)
         {
 
             GameObject newIce = Instantiate(iceCube, objectSpawnlocation, Quaternion.identity) as GameObject;

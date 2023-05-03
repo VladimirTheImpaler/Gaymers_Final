@@ -8,7 +8,6 @@ public class iceScooperLogic : MonoBehaviour
     public GameObject spawnObject;
     public GameObject iceCube;
     public Vector3 objectSpawnlocation;
-    public GameObject wallGate;
     public GameObject tempIceCube;
     public GameObject iceScooper;
 
@@ -31,10 +30,7 @@ public class iceScooperLogic : MonoBehaviour
     {
 
 
-        isPouring = GetComponent<SCPR_PourOnRotate>().isPouring;
-
-        wallGate.GetComponent<MeshCollider>().enabled = false;
-        
+        isPouring = GetComponent<SCPR_PourOnRotate>().isPouring;       
     }
 
 
@@ -44,6 +40,7 @@ public class iceScooperLogic : MonoBehaviour
         iceScooper.GetComponent<Rigidbody>().useGravity = false;
         tempIceCube.gameObject.SetActive(true);
         iceSpawnReady = true;
+        //AudioSource.PlayClipAtPoint(soundName, transform.position);
     }
 
     public void dropped()
@@ -52,12 +49,11 @@ public class iceScooperLogic : MonoBehaviour
         iceScooper.GetComponent<Rigidbody>().useGravity = true;
         tempIceCube.gameObject.SetActive(false);
         iceSpawnReady = true;
+        //AudioSource.PlayClipAtPoint(soundName, transform.position);
     }
 
     public void spawnIce()
     {
-
-        tempIceCube.gameObject.SetActive(false);
 
         objectSpawnlocation = spawnObject.GetComponent<Rigidbody>().position;
 
@@ -67,24 +63,8 @@ public class iceScooperLogic : MonoBehaviour
             GameObject newIce = Instantiate(iceCube, objectSpawnlocation, Quaternion.identity) as GameObject;
             iceSpawnReady = false;
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-
-        if (other.gameObject.CompareTag("iceBucket"))
-        {
-
-            
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
-        }
-        else
-        {
-
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
-        }
-    }   
-    
+        //AudioSource.PlayClipAtPoint(soundName, transform.position);
+    }    
 }
 
 

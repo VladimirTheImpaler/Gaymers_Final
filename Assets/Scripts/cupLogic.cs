@@ -6,6 +6,8 @@ public class cupLogic : MonoBehaviour
 {
 
     public List<string> itemList = new List<string>();
+    public GameObject drinkFinishZone;
+    // add SFX variables here
 
     // Start is called before the first frame update
     void Start()
@@ -16,8 +18,10 @@ public class cupLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
+        if (drinkFinishZone.GetComponent<OrderCompleteLogic>().orderComplete == true) {
+            // may need to unparent from hand if currently held
+            
+        }
     }
 
     private void OnTriggerEnter(Collider other)

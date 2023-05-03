@@ -5,8 +5,7 @@ using UnityEngine;
 public class iceBlockLogic : MonoBehaviour
 {
     public GameObject iceCube;
-    public GameObject iceCubeSpawnCube;
-    public Vector3 objectSpawnlocation;
+    public Vector3 objectSpawnlocation = new Vector3(5.5f, 4.5f, 0.5f);
 
     int timer = 10;
     bool useAble = false;
@@ -20,8 +19,6 @@ public class iceBlockLogic : MonoBehaviour
 
     public void spawnIce()
     {
-
-        objectSpawnlocation = iceCubeSpawnCube.GetComponent<Rigidbody>().position;
 
         if (useAble)
         {
@@ -37,8 +34,6 @@ public class iceBlockLogic : MonoBehaviour
     {
 
         timer -= 1;
-
-        objectSpawnlocation = iceCubeSpawnCube.GetComponent<Rigidbody>().position;
 
         if (timer < 0)
         {

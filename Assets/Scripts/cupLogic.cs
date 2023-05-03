@@ -18,9 +18,12 @@ public class cupLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // MOVE THIS TO A DIFFERENT SCRIPT (CupReturn)
         if (drinkFinishZone.GetComponent<OrderCompleteLogic>().orderComplete == true) {
             // may need to unparent from hand if currently held
-            
+            // wait for a beat
+            // poof effect, teleport cup to orginal position (reset velocity & rotation)
+            // poof effect in front of customer, finished drink appears
         }
     }
 

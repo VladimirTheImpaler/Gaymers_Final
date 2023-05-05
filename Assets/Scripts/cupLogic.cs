@@ -54,6 +54,14 @@ public class cupLogic : MonoBehaviour
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
+        else if (other.gameObject.CompareTag("iceShard"))
+        {
+
+            itemList.Add("iceShard");
+
+            other.gameObject.SetActive(false);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        }
         else
         {
             //other.gameObject.SetActive(true);

@@ -20711,7 +20711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iceCube: {fileID: 7721398975577265993, guid: aa50d023352ad1242a3ce5649f3cba9d, type: 3}
-  objectSpawnlocation: {x: 5.5, y: 4.5, z: 0}
+  objectSpawnlocation: {x: 5.5, y: 4.5, z: 0.5}
 --- !u!64 &1174735363
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32368,7 +32368,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729379336}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -36144,7 +36144,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937762304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

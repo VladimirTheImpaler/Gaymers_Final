@@ -27,6 +27,8 @@ TagManager:
   - juicerFreezeBlock
   - imposter
   - poison
+  - garnishCollider
+  - lemonStartCube
   layers:
   - Default
   - TransparentFX

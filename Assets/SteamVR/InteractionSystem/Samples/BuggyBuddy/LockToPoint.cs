@@ -11,7 +11,7 @@ namespace Valve.VR.InteractionSystem.Sample
         private Rigidbody body;
         public float snapTime = 2;
 
-        private float dropTimer;
+        public float dropTimer;
         private Interactable interactable;
 
         private void Start()

@@ -24,5 +24,8 @@ public class bookScript : MonoBehaviour
     public void showHelp()
     {
 
+        helpText.gameObject.active = true;
+
+
     }
 }

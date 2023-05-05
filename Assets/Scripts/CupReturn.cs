@@ -24,12 +24,13 @@ public class CupReturn : MonoBehaviour
         meshResetTimer -= 1;
 
         if (drinkFinishZone.GetComponent<OrderCompleteLogic>().orderComplete == true) {
+            
             theCup.SetActive(false);
             // poof effect here
             theCup.transform.position = GetComponent<ObjectPosition>().originPosition;
             theCup.transform.rotation = Quaternion.Euler(GetComponent<RotationTracker>().originRotationXYZ);
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
-            // poof effect to show reactivation, or mitch's dispenser thing
+ 
             theCup.SetActive(true);
 
             // poof effect in front of customer, finished drink appears

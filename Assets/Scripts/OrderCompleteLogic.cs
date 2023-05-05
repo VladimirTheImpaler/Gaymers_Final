@@ -9,11 +9,16 @@ public class OrderCompleteLogic : MonoBehaviour
     public GameObject customer;
     public GameObject cup;
 
+    public GameObject orderCompleteBox;
+    public GameObject smokeEffect;
+
     public TextMeshProUGUI tipsText;
 
     public float tipsTotal = 0.00f;
 
     public bool orderComplete;
+
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -78,6 +83,9 @@ public class OrderCompleteLogic : MonoBehaviour
         orderComplete = true;
         tipsText.text = $"\n<u>Tips</u>\n  ${tipsTotal}\n<u>+ ${randomTipAmount}</u>\n${newTotal}";
 
+        Instantiate(smokeEffect, orderCompleteBox.transform);
+        //AudioSource.PlayClipAtPoint(soundName, transform.position);
+
         return newTotal;
     }
 
@@ -88,6 +96,9 @@ public class OrderCompleteLogic : MonoBehaviour
 
         orderComplete = true;
         tipsText.text = $"\n<u>Tips</u>\n  ${tipsTotal}\n<u>- ${randomPenaltyAmount}</u>\n${newTotal}";
+
+        Instantiate(smokeEffect, orderCompleteBox.transform);
+        //AudioSource.PlayClipAtPoint(soundName, transform.position);
 
         return newTotal;
     }

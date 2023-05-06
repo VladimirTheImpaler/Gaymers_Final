@@ -11,6 +11,7 @@ public class ChalkboardLogic : MonoBehaviour
     public GameObject orderCompleteBox;
     public GameObject cupPropertyList;
     public GameObject floorMat;
+    public GameObject robot;
 
     public Toggle Ingredient1Toggle;
     public Toggle Ingredient2Toggle;
@@ -30,8 +31,10 @@ public class ChalkboardLogic : MonoBehaviour
 
     public Canvas chalkboardCanvas;
 
+    public bool robotAtChalkboard;
+    public bool canvasState;
     private bool orderComplete;
-    private bool displayedOrder;
+    public bool displayedOrder;
 
     private List<string> ingredients = new List<string>();
 
@@ -65,6 +68,7 @@ public class ChalkboardLogic : MonoBehaviour
     void Update()
     {
         var randomOrderableItem = string.Empty;
+        robotAtChalkboard = robot.GetComponent<RobotController>().atChalkboard;
 
         if (floorMat.GetComponent<juicerFreezeBlockLogic>().hasJuice)
         {
@@ -100,9 +104,16 @@ public class ChalkboardLogic : MonoBehaviour
                     Ingredient3ToggleObject.SetActive(true);
                     break;
             }
-
-            chalkboardCanvas.enabled = true;
             displayedOrder = true;
+        }
+
+        if (robotAtChalkboard)
+        {
+            chalkboardCanvas.enabled = true;
+            canvasState = chalkboardCanvas.enabled;
+            robot.GetComponent<RobotController>().orderOnChalkboard = true;
+            robot.GetComponent<RobotController>().canMoveBackFromChalkboard = true;
+            robot.GetComponent<RobotController>().atChalkboard = true;
         }
 
         // Logic for ingredient checkboxes
@@ -150,7 +161,7 @@ public class ChalkboardLogic : MonoBehaviour
 
         if (!orderComplete)
         {
-            orderComplete = orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete;
+            orderComplete = Customer.GetComponent<CustomerController>().orderComplete;
         }
 
         if (orderComplete && displayedOrder)
@@ -168,6 +179,7 @@ public class ChalkboardLogic : MonoBehaviour
             Ingredient3ToggleObject.SetActive(false);
             Ingredient4ToggleObject.SetActive(false);
             Ingredient5ToggleObject.SetActive(false);
+            robot.GetComponent<RobotController>().orderOnChalkboard = false;
         }
     }
 }

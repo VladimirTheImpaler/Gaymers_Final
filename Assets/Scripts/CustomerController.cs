@@ -10,6 +10,7 @@ public class CustomerController : MonoBehaviour
     public GameObject cupPropertyList;
     public GameObject customer;
     public GameObject speechBubble;
+    public GameObject robot;
 
     public TextMeshProUGUI customerOrderText;
 
@@ -43,30 +44,46 @@ public class CustomerController : MonoBehaviour
     public bool orderComplete;
     public bool arrivedAtBar;
     public bool isImposterRound;
-    private bool displayedOrder;
+    public bool displayedOrder;
+    public bool doneWithTutorial;
     private bool canMoveX;
     private bool isMovingZ;
+    private bool movedToPlayArea = false;
 
     private void Start()
     {
         arrivedAtBar = false;
         displayedOrder = false;
-        transform.position = new Vector3(2, 4f, -20);
         customerOrderText.enabled = false;
         speechBubble.SetActive(false);
+        this.gameObject.transform.position = new Vector3(100, 100, 100);
     }
 
     void Update()
     {
-        CustomerWalkAnimation();
+        doneWithTutorial = robot.GetComponent<RobotController>().inFinalPosition;
+        if (!doneWithTutorial)
+        {
+            Debug.Log("not done yet boi");
+        }
+        else
+        {
+            if (!movedToPlayArea)
+            {
+                transform.position = new Vector3(2, 4f, -20);
+                movedToPlayArea = true;
+            }
 
-        MoveToBar();
+            CustomerWalkAnimation();
 
-        DisplayOrder();
+            MoveToBar();
 
-        CheckOrderComplete();
+            DisplayOrder();
 
-        MovementAfterComplete();
+            CheckOrderComplete();
+
+            MovementAfterComplete();
+        }
     }
 
     private void CustomerWalkAnimation()
@@ -182,7 +199,7 @@ public class CustomerController : MonoBehaviour
         if (isImposterRound)
         {
             canMoveX = transform.position.x - 1 >= imposterEndingX;
-            isMovingZ = (int)transform.position.z != endingZ + 1;
+            isMovingZ = (int)transform.position.z <= endingZ + 1;
             if (orderComplete && arrivedAtBar)
             {
                 customerOrderText.enabled = false;
@@ -240,5 +257,6 @@ public class CustomerController : MonoBehaviour
         randomOrderableItem = string.Empty;
         cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
         isImposterRound = 3 == UnityEngine.Random.Range(1, 6);
+        robot.GetComponent<RobotController>().hasMovedForCurrentCustomer = false;
     }
 }

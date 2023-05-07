@@ -25510,7 +25510,7 @@ MonoBehaviour:
   chalkboard: {fileID: 1346130975}
   robotText: {fileID: 1993567370}
   speed: 10
-  timer: 80
+  timer: 0
   isTutorial: 1
   isTalking: 0
   needsHint: 0

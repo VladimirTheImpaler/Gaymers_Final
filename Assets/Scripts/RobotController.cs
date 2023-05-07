@@ -47,8 +47,8 @@ public class RobotController : MonoBehaviour
         robot.transform.position = robotStartPos;
         robotTalking.transform.position = robotStartPos;
         robotWriting.transform.position = robotStartPos;
-        robot.SetActive(true);
-        robotTalking.SetActive(false);
+        robot.SetActive(false);
+        robotTalking.SetActive(true);
         robotWriting.SetActive(false);
         speechBubble.SetActive(false);
     }

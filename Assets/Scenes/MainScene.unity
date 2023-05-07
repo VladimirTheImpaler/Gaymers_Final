@@ -3898,7 +3898,7 @@ PrefabInstance:
       objectReference: {fileID: 642591174}
     - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
       propertyPath: speed
-      value: 20
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
       propertyPath: endingX
@@ -5089,15 +5089,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6698910915413986012, guid: c2f42712b4e42594e96062727c8097fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6698910915413986012, guid: c2f42712b4e42594e96062727c8097fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6698910915413986012, guid: c2f42712b4e42594e96062727c8097fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 6698910915413986012, guid: c2f42712b4e42594e96062727c8097fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5213,7 +5213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1855967084}
   chalkboard: {fileID: 475445018}
-  customer: {fileID: 0}
+  customer: {fileID: 1613601470}
   customerHasOrdered: 0
 --- !u!114 &180699747 stripped
 MonoBehaviour:
@@ -14361,8 +14361,8 @@ MonoBehaviour:
   customer: {fileID: 1613601470}
   chalkboard: {fileID: 475445018}
   robotText: {fileID: 175007641}
-  speed: 10
-  timer: 80
+  speed: 5
+  timer: 0
   isTutorial: 1
   isTalking: 0
   needsHint: 0
@@ -31073,6 +31073,10 @@ PrefabInstance:
       value: fancyCup2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75d7a5baeb8df4146ad86d7222dfffc0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75d7a5baeb8df4146ad86d7222dfffc0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -31239,7 +31243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cupPropertyList: {fileID: 1847144384}
-  customer: {fileID: 0}
+  customer: {fileID: 1613601470}
   cup: {fileID: 3561886893830075259}
   orderCompleteBox: {fileID: 1315776444}
   smokeEffect: {fileID: 1078379460}
@@ -33682,15 +33686,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6051ea5f1dd0e2a4890f5b07d57e41da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.094
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6051ea5f1dd0e2a4890f5b07d57e41da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6051ea5f1dd0e2a4890f5b07d57e41da, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6051ea5f1dd0e2a4890f5b07d57e41da, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51118,15 +51122,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cab8e3d7b6d1b6c449c7f88d167da90e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.452
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cab8e3d7b6d1b6c449c7f88d167da90e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.583
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cab8e3d7b6d1b6c449c7f88d167da90e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.89
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cab8e3d7b6d1b6c449c7f88d167da90e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -51346,7 +51350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1855967084}
   chalkboard: {fileID: 475445018}
-  customer: {fileID: 0}
+  customer: {fileID: 1613601470}
   customerHasOrdered: 0
 --- !u!1 &2126368669
 GameObject:

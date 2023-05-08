@@ -20,6 +20,7 @@ public class CrankRotation : MonoBehaviour
 
         if (crankThatHog > 5.0f) {
             juicerIsJuicing = true;
+
         }
         else {
             juicerIsJuicing = false;

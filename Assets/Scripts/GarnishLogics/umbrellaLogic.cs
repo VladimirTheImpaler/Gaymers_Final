@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cherryLogic : MonoBehaviour
+public class umbrellaLogic : MonoBehaviour
 {
 
-    public GameObject mainCherry;
+
+    public GameObject mainumbrella;
+    public GameObject mainumbrellaBall;
     public GameObject cupColliderDisk;
-    public GameObject cherryOnDrink;
+    public GameObject umbrellaOnDrink;
+    public GameObject umbrellaBallOnDrink;
 
     public bool inHand = false;
 
@@ -22,7 +25,12 @@ public class cherryLogic : MonoBehaviour
     {
 
 
-
+        if (this.GetComponent<Rigidbody>().isKinematic && !inHand)
+        {
+            this.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            mainumbrellaBall.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        }
     }
 
     public void pickedUpObject()
@@ -50,17 +58,16 @@ public class cherryLogic : MonoBehaviour
         {
             if (!inHand)
             {
-                cupColliderDisk.GetComponent<cupLogic>().itemList.Add("cherry");
+                cupColliderDisk.GetComponent<cupLogic>().itemList.Add("umbrella");
 
                 this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-                cherryOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = true;
+                mainumbrellaBall.gameObject.GetComponent<MeshRenderer>().enabled = false;
+
+                umbrellaOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = true;
+                umbrellaBallOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = true;
                 //other.gameObject.SetActive(false);
                 //AudioSource.PlayClipAtPoint(soundName, transform.position);
             }
-        }else if (other.gameObject.CompareTag("cherryStartCube"))
-        {
-
-            this.gameObject.GetComponent<MeshRenderer>().enabled = true;
         }
     }
 }

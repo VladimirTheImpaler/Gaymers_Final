@@ -48,5 +48,15 @@ public class cupFlipLogic : MonoBehaviour
             wasFacingDownZ = false;
         }
 
+
+        if ((140 < cupRotationZ) && (cupRotationZ < 200))
+        {
+            wasFacingDownZ = true;
+        }
+        else
+        {
+            wasFacingDownZ = false;
+        }
+
     }
 }

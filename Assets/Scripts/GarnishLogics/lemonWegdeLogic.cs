@@ -53,7 +53,7 @@ public class lemonWegdeLogic : MonoBehaviour
         if (other.gameObject.CompareTag("garnishCollider"))
         {
             if (!inHand) {
-                cupColliderDisk.GetComponent<cupLogic>().itemList.Add("lemonWedge");
+                cupColliderDisk.GetComponent<cupLogic>().itemList.Add("lemon");
 
                 this.gameObject.GetComponent<MeshRenderer>().enabled = false;
                 lemonOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = true;

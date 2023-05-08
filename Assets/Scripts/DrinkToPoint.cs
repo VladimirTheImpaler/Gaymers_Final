@@ -5,10 +5,11 @@ using UnityEngine;
 
 namespace Valve.VR.InteractionSystem.Sample
 {
-    public class LockToPoint : MonoBehaviour
+    public class DrinkToPoint : MonoBehaviour
     {
         public Transform snapTo;
         private Rigidbody body;
+        public GameObject fancyDrinkObject;
         public float snapTime = 2;
 
         public float dropTimer;
@@ -22,6 +23,12 @@ namespace Valve.VR.InteractionSystem.Sample
 
         private void FixedUpdate()
         {
+
+            if (fancyDrinkObject.GetComponent<fancyDrinkLogic>().resetDropTimer)
+            {
+                dropTimer = 0;
+            }
+
             bool used = false;
             if (interactable != null)
                 used = interactable.attachedToHand;

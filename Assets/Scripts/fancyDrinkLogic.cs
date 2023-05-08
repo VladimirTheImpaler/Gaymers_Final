@@ -7,9 +7,12 @@ public class fancyDrinkLogic : MonoBehaviour
 
     public GameObject fancyDrink;
     public GameObject orderCompleteBox;
-    public bool returnToBar = true;
+    public GameObject drinkMesh1;
+
+    public bool moveToCustomer = false;
     public string order;
     public string fancyDrinkName;
+    public bool resetDropTimer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,17 +26,23 @@ public class fancyDrinkLogic : MonoBehaviour
 
         order = orderCompleteBox.GetComponent<OrderCompleteLogic>().customer.GetComponent<CustomerController>().randomOrderableItem;
 
-        if ((order == fancyDrinkName) && (orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete == true))
+        //if ((order == fancyDrinkName) && (orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete == true))
+        if (moveToCustomer)
         {
 
-            fancyDrink.SetActive(true);
+            resetDropTimer = false;
+            drinkMesh1.GetComponent<MeshRenderer>().enabled = true;
+            
         }
-        else if (returnToBar)
+        else
         {
+
+            resetDropTimer = true;
+            drinkMesh1.GetComponent<MeshRenderer>().enabled = false;
 
             fancyDrink.transform.position = GetComponent<ObjectPosition>().originPosition;
-            fancyDrink.SetActive(false);
         }
+        
 
 
 

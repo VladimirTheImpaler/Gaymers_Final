@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class cupLogic : MonoBehaviour
 {
+    public GameObject cupColliderDisk;
 
     public List<string> itemList = new List<string>();
     public AudioClip confirmSFX;
-    
+    public GameObject iceMaterial;
+    public GameObject kegMaterial;
+    public GameObject appleMaterial;
+    public GameObject iceShardMaterial;
+    public GameObject tonicMaterial;
+
     // add SFX variables here
 
     // Start is called before the first frame update
@@ -19,7 +25,17 @@ public class cupLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public void setMaterialOff()
+    {
+
+        iceMaterial.SetActive(false);
+        kegMaterial.SetActive(false);
+        appleMaterial.SetActive(false);
+        iceShardMaterial.SetActive(false);
+        tonicMaterial.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,9 +50,10 @@ public class cupLogic : MonoBehaviour
             itemList.Add("iceCube");
 
             other.gameObject.SetActive(false);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
 
-            
+            setMaterialOff();
+            iceMaterial.SetActive(true);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("kegLiquid"))
         {
@@ -47,9 +64,10 @@ public class cupLogic : MonoBehaviour
             itemList.Add("kegLiquid");
 
             other.gameObject.SetActive(false);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
 
-            
+            setMaterialOff();
+            kegMaterial.SetActive(true);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("appleJuice"))
         {
@@ -60,9 +78,10 @@ public class cupLogic : MonoBehaviour
             itemList.Add("appleJuice");
 
             other.gameObject.SetActive(false);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
 
-            
+            setMaterialOff();
+            appleMaterial.SetActive(true);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("iceShard"))
         {
@@ -73,9 +92,10 @@ public class cupLogic : MonoBehaviour
             itemList.Add("iceShard");
 
             other.gameObject.SetActive(false);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
 
-            
+            setMaterialOff();
+            iceShardMaterial.SetActive(true);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("tonic"))
         {
@@ -83,6 +103,9 @@ public class cupLogic : MonoBehaviour
             itemList.Add("tonic");
 
             other.gameObject.SetActive(false);
+
+            setMaterialOff();
+            tonicMaterial.SetActive(true);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else

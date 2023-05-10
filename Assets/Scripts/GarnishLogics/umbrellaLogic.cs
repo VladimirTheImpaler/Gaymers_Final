@@ -13,6 +13,8 @@ public class umbrellaLogic : MonoBehaviour
     public GameObject umbrellaBallOnDrink;
     public AudioClip confirmSFX;
 
+    public List<string> itemList;
+
     public bool inHand = false;
 
     // Start is called before the first frame update
@@ -25,6 +27,7 @@ public class umbrellaLogic : MonoBehaviour
     void Update()
     {
 
+        itemList =  cupColliderDisk.GetComponent<cupLogic>().itemList;
 
         if (this.GetComponent<Rigidbody>().isKinematic && !inHand)
         {

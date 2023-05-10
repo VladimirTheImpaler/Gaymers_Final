@@ -22004,6 +22004,8 @@ MonoBehaviour:
   mainLemon: {fileID: 876554182}
   cupColliderDisk: {fileID: 1847144384}
   lemonOnDrink: {fileID: 155241056}
+  confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+  itemList: []
   inHand: 0
 --- !u!114 &876554186
 MonoBehaviour:
@@ -42635,6 +42637,8 @@ MonoBehaviour:
   cupColliderDisk: {fileID: 1847144384}
   umbrellaOnDrink: {fileID: 1495158626}
   umbrellaBallOnDrink: {fileID: 1008834543}
+  confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+  itemList: []
   inHand: 0
 --- !u!64 &1680801659
 MeshCollider:
@@ -45177,6 +45181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemList: []
+  confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
 --- !u!64 &1847144388
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47835,6 +47840,8 @@ MonoBehaviour:
   mainStraw: {fileID: 1953570228}
   cupColliderDisk: {fileID: 1847144384}
   strawOnDrink: {fileID: 519783395}
+  confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+  itemList: []
   inHand: 0
 --- !u!114 &1953570233
 MonoBehaviour:
@@ -54219,6 +54226,8 @@ MonoBehaviour:
   mainCherry: {fileID: 8296172667837818169}
   cupColliderDisk: {fileID: 1847144384}
   cherryOnDrink: {fileID: 741814578}
+  confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+  itemList: []
   inHand: 0
 --- !u!114 &8296172667837818171
 MonoBehaviour:

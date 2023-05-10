@@ -8,6 +8,7 @@ public class lemonWegdeLogic : MonoBehaviour
     public GameObject mainLemon;
     public GameObject cupColliderDisk;
     public GameObject lemonOnDrink;
+    public AudioClip confirmSFX;
 
     public bool inHand = false;
 
@@ -52,7 +53,12 @@ public class lemonWegdeLogic : MonoBehaviour
 
         if (other.gameObject.CompareTag("garnishCollider"))
         {
-            if (!inHand) {
+            if (!inHand)
+            {
+                if (!itemList.Contains("garnishCollider")) { // may need to change this to only ding when correct ingredient is added
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+                }
+
                 cupColliderDisk.GetComponent<cupLogic>().itemList.Add("lemon");
 
                 this.gameObject.GetComponent<MeshRenderer>().enabled = false;

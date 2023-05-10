@@ -9,6 +9,7 @@ public class cherryLogic : MonoBehaviour
     public GameObject mainCherry;
     public GameObject cupColliderDisk;
     public GameObject cherryOnDrink;
+    public AudioClip confirmSFX;
 
     public bool inHand = false;
 
@@ -55,6 +56,10 @@ public class cherryLogic : MonoBehaviour
         {
             if (!inHand)
             {
+                if (!itemList.Contains("garnishCollider")) { // may need to change this to only ding when correct ingredient is added
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+                }
+                
                 cupColliderDisk.GetComponent<cupLogic>().itemList.Add("cherry");
 
                 this.gameObject.GetComponent<MeshRenderer>().enabled = false;

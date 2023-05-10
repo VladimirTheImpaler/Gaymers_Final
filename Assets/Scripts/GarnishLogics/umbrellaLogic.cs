@@ -11,6 +11,7 @@ public class umbrellaLogic : MonoBehaviour
     public GameObject cupColliderDisk;
     public GameObject umbrellaOnDrink;
     public GameObject umbrellaBallOnDrink;
+    public AudioClip confirmSFX;
 
     public bool inHand = false;
 
@@ -58,6 +59,10 @@ public class umbrellaLogic : MonoBehaviour
         {
             if (!inHand)
             {
+                if (!itemList.Contains("garnishCollider")) { // may need to change this to only ding when correct ingredient is added
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+                }
+
                 cupColliderDisk.GetComponent<cupLogic>().itemList.Add("umbrella");
 
                 this.gameObject.GetComponent<MeshRenderer>().enabled = false;

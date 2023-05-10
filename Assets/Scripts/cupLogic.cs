@@ -6,6 +6,7 @@ public class cupLogic : MonoBehaviour
 {
 
     public List<string> itemList = new List<string>();
+    public AudioClip confirmSFX;
     
     // add SFX variables here
 
@@ -26,35 +27,55 @@ public class cupLogic : MonoBehaviour
 
         if (other.gameObject.CompareTag("iceCube"))
         {
+            if (!itemList.Contains("iceCube")) { // may need to change this to only ding when correct ingredient is added
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+            }
 
             itemList.Add("iceCube");
 
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
+
+            
         }
         else if (other.gameObject.CompareTag("kegLiquid"))
         {
+            if (!itemList.Contains("kegLiquid")) {
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+            }
 
             itemList.Add("kegLiquid");
 
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
+
+            
         }
         else if (other.gameObject.CompareTag("appleJuice"))
         {
+            if (!itemList.Contains("appleJuice")) {
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+            }
 
             itemList.Add("appleJuice");
 
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
+
+            
         }
         else if (other.gameObject.CompareTag("iceShard"))
         {
+            if (!itemList.Contains("iceShard")) {
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+            }
 
             itemList.Add("iceShard");
 
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
+
+            
         }
         else if (other.gameObject.CompareTag("tonic"))
         {

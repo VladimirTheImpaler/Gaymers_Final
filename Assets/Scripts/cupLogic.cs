@@ -56,6 +56,14 @@ public class cupLogic : MonoBehaviour
             other.gameObject.SetActive(false);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
+        else if (other.gameObject.CompareTag("tonic"))
+        {
+
+            itemList.Add("tonic");
+
+            other.gameObject.SetActive(false);
+            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        }
         else
         {
             //other.gameObject.SetActive(true);

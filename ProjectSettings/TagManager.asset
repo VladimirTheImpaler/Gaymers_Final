@@ -29,6 +29,7 @@ TagManager:
   - poison
   - garnishCollider
   - lemonStartCube
+  - tonic
   layers:
   - Default
   - TransparentFX

@@ -17,8 +17,8 @@ public class OrderCompleteLogic : MonoBehaviour
     public float tipsTotal = 0.00f;
 
     public bool orderComplete;
+    public bool isSuccessful;
 
-    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,7 +28,7 @@ public class OrderCompleteLogic : MonoBehaviour
             var randomOrderableItem = customer.GetComponent<CustomerController>().randomOrderableItem;
             var isImposterRound = customer.GetComponent<CustomerController>().isImposterRound;
             var garnish = customer.GetComponent<CustomerController>().randomGarnish;
-            bool isSuccessful = false;
+            isSuccessful = false;
             if (!isImposterRound)
             {
                 switch (randomOrderableItem)

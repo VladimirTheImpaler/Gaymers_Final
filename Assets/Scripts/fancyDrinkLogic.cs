@@ -11,6 +11,8 @@ public class fancyDrinkLogic : MonoBehaviour
 
     public bool moveToCustomer = false;
     public string order;
+    public bool orderComplete;
+    public bool isSuccessful;
     public string fancyDrinkName;
     public bool resetDropTimer = false;
 
@@ -25,6 +27,21 @@ public class fancyDrinkLogic : MonoBehaviour
     {
 
         order = orderCompleteBox.GetComponent<OrderCompleteLogic>().customer.GetComponent<CustomerController>().randomOrderableItem;
+        orderComplete = orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete;
+        isSuccessful = orderCompleteBox.GetComponent<OrderCompleteLogic>().isSuccessful;
+
+        if (((order == this.fancyDrinkName) && orderComplete) && isSuccessful)
+        {
+            moveToCustomer = true;
+            //good sound here
+        }
+        else
+        {
+            moveToCustomer = false;
+            //bad sound here
+        }
+
+
 
         //if ((order == fancyDrinkName) && (orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete == true))
         if (moveToCustomer)

@@ -9,6 +9,7 @@ public class strawLogic : MonoBehaviour
     public GameObject mainStraw;
     public GameObject cupColliderDisk;
     public GameObject strawOnDrink;
+    public AudioClip confirmSFX;
 
     public bool inHand = false;
 
@@ -55,6 +56,10 @@ public class strawLogic : MonoBehaviour
         {
             if (!inHand)
             {
+                if (!itemList.Contains("garnishCollider")) { // may need to change this to only ding when correct ingredient is added
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+                }
+                
                 cupColliderDisk.GetComponent<cupLogic>().itemList.Add("straw");
 
                 this.gameObject.GetComponent<MeshRenderer>().enabled = false;

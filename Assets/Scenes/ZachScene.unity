@@ -5243,6 +5243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapTo: {fileID: 1060955354}
   snapTime: 1
+  dropTimer: 0
 --- !u!114 &391361947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12337,6 +12338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapTo: {fileID: 140894906}
   snapTime: 2
+  dropTimer: 0
 --- !u!114 &795809753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20851,6 +20853,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 945747201}
     m_Modifications:
+    - target: {fileID: 332064997341175616, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2103148652}
     - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
       propertyPath: robot
       value: 
@@ -20899,6 +20905,22 @@ PrefabInstance:
       propertyPath: orderCompleteBox
       value: 
       objectReference: {fileID: 1955598731}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: orderableItems.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: orderableItems.Array.data[3]
+      value: Cube Juice
+      objectReference: {fileID: 0}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: orderableItems.Array.data[4]
+      value: Cube Juice
+      objectReference: {fileID: 0}
+    - target: {fileID: 332064997341175617, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
+      propertyPath: orderableItems.Array.data[5]
+      value: Cube Juice
+      objectReference: {fileID: 0}
     - target: {fileID: 332064997341175622, guid: 8aab2aab035cae944a75b571a61bab57, type: 3}
       propertyPath: m_Name
       value: Customer
@@ -25494,7 +25516,7 @@ MonoBehaviour:
   chalkboard: {fileID: 1346130975}
   robotText: {fileID: 1993567370}
   speed: 10
-  timer: 0
+  timer: 82
   isTutorial: 1
   isTalking: 0
   needsHint: 0

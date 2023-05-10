@@ -36,12 +36,10 @@ public class ChalkboardLogic : MonoBehaviour
     private bool orderComplete;
     public bool displayedOrder;
 
-    private List<string> ingredients = new List<string>();
+    private List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice", "Shaved Ice", "Tonic" };
 
     void Start()
     {
-        ingredients = Customer.GetComponent<CustomerController>().ingredients;
-
         Ingredient1ToggleObject = GameObject.FindWithTag("Ingredient1Toggle");
         Ingredient2ToggleObject = GameObject.FindWithTag("Ingredient2Toggle");
         Ingredient3ToggleObject = GameObject.FindWithTag("Ingredient3Toggle");
@@ -68,6 +66,7 @@ public class ChalkboardLogic : MonoBehaviour
     void Update()
     {
         var randomOrderableItem = string.Empty;
+        var garnish = string.Empty;
         robotAtChalkboard = robot.GetComponent<RobotController>().atChalkboard;
 
         if (floorMat.GetComponent<juicerFreezeBlockLogic>().hasJuice)
@@ -81,6 +80,7 @@ public class ChalkboardLogic : MonoBehaviour
         if (Customer.GetComponent<CustomerController>().arrivedAtBar)
         {
             randomOrderableItem = Customer.GetComponent<CustomerController>().randomOrderableItem;
+            garnish = Customer.GetComponent<CustomerController>().randomGarnish;
         }
 
         if (randomOrderableItem != string.Empty && !displayedOrder)
@@ -88,20 +88,47 @@ public class ChalkboardLogic : MonoBehaviour
             switch (randomOrderableItem)
             {
                 case "Purple Ice":
-                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[0]} \n    {ingredients[1]}";
-                    Ingredient1ToggleObject.SetActive(true);
-                    Ingredient2ToggleObject.SetActive(true);
-                    break;
-                case "Liquid Apple":
-                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[1]} \n    {ingredients[2]}";
-                    Ingredient1ToggleObject.SetActive(true);
-                    Ingredient2ToggleObject.SetActive(true);
-                    break;
-                case "Cube Juice":
-                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[2]} \n    {ingredients[0]} \n    {ingredients[1]}";
+                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[1]} \n    {ingredients[0]} \n    {ingredients[2]} \n    {garnish}";
                     Ingredient1ToggleObject.SetActive(true);
                     Ingredient2ToggleObject.SetActive(true);
                     Ingredient3ToggleObject.SetActive(true);
+                    Ingredient4ToggleObject.SetActive(true);
+                    break;
+                case "Liquid Apple":
+                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[2]} \n    {ingredients[4]} \n    {ingredients[0]} \n    {garnish}";
+                    Ingredient1ToggleObject.SetActive(true);
+                    Ingredient2ToggleObject.SetActive(true);
+                    Ingredient3ToggleObject.SetActive(true);
+                    Ingredient4ToggleObject.SetActive(true);
+                    break;
+                case "Cube Juice":
+                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[0]} \n    {ingredients[3]} \n    {ingredients[2]} \n    {garnish}";
+                    Ingredient1ToggleObject.SetActive(true);
+                    Ingredient2ToggleObject.SetActive(true);
+                    Ingredient3ToggleObject.SetActive(true);
+                    Ingredient4ToggleObject.SetActive(true);
+                    break;
+                case "Apple Smoothie":
+                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[2]} \n    {ingredients[3]} \n    {ingredients[1]} \n    {garnish}";
+                    Ingredient1ToggleObject.SetActive(true);
+                    Ingredient2ToggleObject.SetActive(true);
+                    Ingredient3ToggleObject.SetActive(true);
+                    Ingredient4ToggleObject.SetActive(true);
+                    break;
+                case "Keg Tonic":
+                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[1]} \n    {ingredients[4]} \n    {ingredients[3]} \n    {garnish}";
+                    Ingredient1ToggleObject.SetActive(true);
+                    Ingredient2ToggleObject.SetActive(true);
+                    Ingredient3ToggleObject.SetActive(true);
+                    Ingredient4ToggleObject.SetActive(true);
+                    break;
+                case "Everything Smoothie":
+                    orderAndIngredients.text = $"\n<u>{randomOrderableItem}:</u> \n    {ingredients[4]} \n    {ingredients[1]} \n    {ingredients[2]} \n    {ingredients[3]} \n    {garnish}";
+                    Ingredient1ToggleObject.SetActive(true);
+                    Ingredient2ToggleObject.SetActive(true);
+                    Ingredient3ToggleObject.SetActive(true);
+                    Ingredient4ToggleObject.SetActive(true);
+                    Ingredient5ToggleObject.SetActive(true);
                     break;
             }
             displayedOrder = true;
@@ -123,37 +150,115 @@ public class ChalkboardLogic : MonoBehaviour
             switch (randomOrderableItem)
             {
                 case "Purple Ice":
-                    if (cupIngredients.Contains("iceCube"))
+                    if (cupIngredients.Contains("kegLiquid"))
                     {
                         Ingredient1Toggle.isOn = true;
                     }
-                    if (cupIngredients.Contains("kegLiquid"))
+                    if (cupIngredients.Contains("iceCube"))
                     {
                         Ingredient2Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("appleJuice"))
+                    {
+                        Ingredient3Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains(garnish.ToLower()))
+                    {
+                        Ingredient4Toggle.isOn = true;
                     }
                     break;
                 case "Liquid Apple":
-                    if (cupIngredients.Contains("kegLiquid"))
+                    if (cupIngredients.Contains("appleJuice"))
                     {
                         Ingredient1Toggle.isOn = true;
                     }
-                    if (cupIngredients.Contains("appleJuice"))
+                    if (cupIngredients.Contains("tonic"))
                     {
                         Ingredient2Toggle.isOn = true;
                     }
+                    if (cupIngredients.Contains("iceCube"))
+                    {
+                        Ingredient3Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains(garnish.ToLower()))
+                    {
+                        Ingredient4Toggle.isOn = true;
+                    }
                     break;
                 case "Cube Juice":
+                    if (cupIngredients.Contains("iceCube"))
+                    {
+                        Ingredient1Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("shavedIce"))
+                    {
+                        Ingredient2Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("appleJuice"))
+                    {
+                        Ingredient3Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains(garnish.ToLower()))
+                    {
+                        Ingredient4Toggle.isOn = true;
+                    }
+                    break;
+                case "Apple Smoothie":
                     if (cupIngredients.Contains("appleJuice"))
                     {
                         Ingredient1Toggle.isOn = true;
                     }
-                    if (cupIngredients.Contains("iceCube"))
+                    if (cupIngredients.Contains("shavedIce"))
                     {
                         Ingredient2Toggle.isOn = true;
                     }
                     if (cupIngredients.Contains("kegLiquid"))
                     {
                         Ingredient3Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains(garnish.ToLower()))
+                    {
+                        Ingredient4Toggle.isOn = true;
+                    }
+                    break;
+                case "Keg Tonic":
+                    if (cupIngredients.Contains("kegLiquid"))
+                    {
+                        Ingredient1Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("tonic"))
+                    {
+                        Ingredient2Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("shavedIce"))
+                    {
+                        Ingredient3Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains(garnish.ToLower()))
+                    {
+                        Ingredient4Toggle.isOn = true;
+                    }
+                    break;
+                case "Everything Smoothie":
+                    if (cupIngredients.Contains("tonic"))
+                    {
+                        Ingredient1Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("kegLiquid"))
+                    {
+                        Ingredient2Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("appleJuice"))
+                    {
+                        Ingredient3Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains("shavedIce"))
+                    {
+                        Ingredient4Toggle.isOn = true;
+                    }
+                    if (cupIngredients.Contains(garnish.ToLower()))
+                    {
+                        Ingredient5Toggle.isOn = true;
                     }
                     break;
             }

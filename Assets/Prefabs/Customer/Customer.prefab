@@ -230,31 +230,35 @@ MonoBehaviour:
   cupPropertyList: {fileID: 0}
   customer: {fileID: 332064997341175622}
   speechBubble: {fileID: 0}
+  robot: {fileID: 0}
   customerOrderText: {fileID: 857142406304873712}
-  ingredientsListText: {fileID: 0}
   walk1: {fileID: 2100000, guid: 52635941dba4b4a4b9e29a2592872c9d, type: 2}
   walk2: {fileID: 2100000, guid: 8bdc98a0808037e488ce99eabd34c086, type: 2}
   walk3: {fileID: 2100000, guid: 98719b2271ca08b4aaa40f94d6305a1f, type: 2}
   walk4: {fileID: 2100000, guid: 9d6d53254993368469608680790a71f7, type: 2}
+  imposterWalk1: {fileID: 0}
+  imposterWalk2: {fileID: 0}
+  imposterWalk3: {fileID: 0}
+  imposterWalk4: {fileID: 0}
   randomOrderableItem: 
+  randomGarnish: 
+  lastItemOrdered: 100
+  randomOrderableItemsNumber: 0
   speed: 7
   atBarPos: -6
   startingPos: -15
   leavingBarX: 2
   endingX: -25
+  imposterEndingX: -4
+  endingZ: -12
   xStart: 2
   zStart: -6
   delay: 0.2
-  orderableItems:
-  - Purple Ice
-  - Liquid Apple
-  - Cube Juice
-  ingredients:
-  - Ice Cubes
-  - Keg Liquid
-  - Apple Juice
   orderComplete: 0
   arrivedAtBar: 0
+  isImposterRound: 0
+  displayedOrder: 0
+  doneWithTutorial: 0
 --- !u!1 &2209694478665650238
 GameObject:
   m_ObjectHideFlags: 0

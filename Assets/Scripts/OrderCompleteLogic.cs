@@ -27,23 +27,39 @@ public class OrderCompleteLogic : MonoBehaviour
             var cupList = cupPropertyList.GetComponent<cupLogic>().itemList;
             var randomOrderableItem = customer.GetComponent<CustomerController>().randomOrderableItem;
             var isImposterRound = customer.GetComponent<CustomerController>().isImposterRound;
+            var garnish = customer.GetComponent<CustomerController>().randomGarnish;
             bool isSuccessful = false;
             if (!isImposterRound)
             {
                 switch (randomOrderableItem)
                 {
                     case "Purple Ice":
-                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("kegLiquid");
+                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains(garnish.ToLower());
                         tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully(); 
                         isSuccessful = false;
                         break;
                     case "Liquid Apple":
-                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("appleJuice");
+                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("appleJuice") && cupList.Contains("tonic") && cupList.Contains(garnish.ToLower());
                         tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
                         isSuccessful = false;
                         break;
                     case "Cube Juice":
-                        isSuccessful = cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid");
+                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("appleJuice") && cupList.Contains("shavedIce") && cupList.Contains(garnish.ToLower());
+                        tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
+                        isSuccessful = false;
+                        break;
+                    case "Apple Smoothie":
+                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains("shavedIce") && cupList.Contains(garnish.ToLower());
+                        tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
+                        isSuccessful = false;
+                        break;
+                    case "Keg Tonic":
+                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("shavedIce") && cupList.Contains("tonic") && cupList.Contains(garnish.ToLower());
+                        tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
+                        isSuccessful = false;
+                        break;
+                    case "Everything Smoothie":
+                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains("shavedIce") && cupList.Contains("tonic") && cupList.Contains(garnish.ToLower());
                         tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
                         isSuccessful = false;
                         break;
@@ -54,17 +70,32 @@ public class OrderCompleteLogic : MonoBehaviour
                 switch (randomOrderableItem)
                 {
                     case "Purple Ice":
-                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("kegLiquid") && cupList.Contains("poison");
+                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains(garnish.ToLower()) && cupList.Contains("poison");
                         tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
                         isSuccessful = false;
                         break;
                     case "Liquid Apple":
-                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains("poison");
+                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("appleJuice") && cupList.Contains("tonic") && cupList.Contains(garnish.ToLower()) && cupList.Contains("poison");
                         tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
                         isSuccessful = false;
                         break;
                     case "Cube Juice":
-                        isSuccessful = cupList.Contains("appleJuice") && cupList.Contains("iceCube") && cupList.Contains("kegLiquid") && cupList.Contains("poison");
+                        isSuccessful = cupList.Contains("iceCube") && cupList.Contains("appleJuice") && cupList.Contains("shavedIce") && cupList.Contains("poison");
+                        tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
+                        isSuccessful = false;
+                        break;
+                    case "Apple Smoothie":
+                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains("shavedIce") && cupList.Contains(garnish.ToLower()) && cupList.Contains("poison");
+                        tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
+                        isSuccessful = false;
+                        break;
+                    case "Keg Tonic":
+                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("shavedIce") && cupList.Contains("tonic") && cupList.Contains(garnish.ToLower()) && cupList.Contains("poison");
+                        tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
+                        isSuccessful = false;
+                        break;
+                    case "Everything Smoothie":
+                        isSuccessful = cupList.Contains("kegLiquid") && cupList.Contains("appleJuice") && cupList.Contains("shavedIce") && cupList.Contains("tonic") && cupList.Contains(garnish.ToLower()) && cupList.Contains("poison");
                         tipsTotal = isSuccessful ? CompletedSuccessfully() : CompletedNotSuccessfully();
                         isSuccessful = false;
                         break;

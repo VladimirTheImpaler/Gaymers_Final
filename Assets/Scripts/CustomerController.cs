@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CustomerController : MonoBehaviour
@@ -24,6 +25,9 @@ public class CustomerController : MonoBehaviour
     public Material imposterWalk4;
 
     public string randomOrderableItem;
+    public string randomGarnish;
+    public int lastItemOrdered = 100;
+    public int randomOrderableItemsNumber;
 
     public float speed = 5.0f;
     public float atBarPos = -5f;
@@ -38,8 +42,9 @@ public class CustomerController : MonoBehaviour
     public float delay = .2f;
     float timer;
 
-    public List<string> orderableItems = new List<string>() { "Purple Ice", "Liquid Apple", "Cube Juice" };
-    public List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice" };
+    private List<string> orderableItems = new List<string>() { "Apple Smoothie", "Keg Tonic", "Everything Smoothie", "Purple Ice", "Liquid Apple", "Cube Juice" };
+    private List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice", "Shaved Ice", "Tonic" };
+    private List<string> garnishes = new List<string>() { "Lemon", "Cherries", "Umbrella", "Straw"};
 
     public bool orderComplete;
     public bool arrivedAtBar;
@@ -62,12 +67,8 @@ public class CustomerController : MonoBehaviour
     void Update()
     {
         doneWithTutorial = robot.GetComponent<RobotController>().inFinalPosition;
-        if (!doneWithTutorial)
-        {
-            Debug.Log("not done yet boi");
-        }
-        else
-        {
+        if (doneWithTutorial)
+        {           
             if (!movedToPlayArea)
             {
                 transform.position = new Vector3(2, 4f, -20);
@@ -137,46 +138,33 @@ public class CustomerController : MonoBehaviour
                 arrivedAtBar = true;
 
                 var randomOrderTextNumber = UnityEngine.Random.Range(0, 4);
-                var randomOrderableItemsNumber = UnityEngine.Random.Range(0, orderableItems.Count * 3);
-                switch (randomOrderableItemsNumber)
-                {
-                    case 0:
-                    case 1:
-                    case 2:
-                        randomOrderableItemsNumber = 0;
-                        break;
-                    case 3:
-                    case 4:
-                    case 5:
-                        randomOrderableItemsNumber = 1;
-                        break;
-                    case 6:
-                    case 7:
-                    case 8:
-                        randomOrderableItemsNumber = 2;
-                        break;
-                    case 9:
-                    case 10:
-                    case 11:
-                        randomOrderableItemsNumber = 3;
-                        break;
-                }
+                randomGarnish = garnishes[UnityEngine.Random.Range(0, garnishes.Count)];
 
-                randomOrderableItem = orderableItems[randomOrderableItemsNumber];
+                do
+                {
+                    randomOrderableItemsNumber = UnityEngine.Random.Range(0, 5);
+                    randomOrderableItem = orderableItems[randomOrderableItemsNumber];
+                } while (randomOrderableItemsNumber == lastItemOrdered);
+
+                lastItemOrdered = randomOrderableItemsNumber;
 
                 switch (randomOrderTextNumber)
                 {
                     case 0:
-                        customerOrderText.text = isImposterRound ? $"Argh! You need to make me a {randomOrderableItem}!" : $"Hello! Could I please get a {randomOrderableItem}? Thank you!";
+                        customerOrderText.text = string.Empty;
+                        customerOrderText.text = isImposterRound ? $"Argh! You need to make me a {randomOrderableItem} with {randomGarnish}!" : $"Hello! Could I please get a {randomOrderableItem} with {randomGarnish}? Thank you!";
                         break;
                     case 1:
-                        customerOrderText.text = isImposterRound ? $"I'm starving! Make a {randomOrderableItem} for me." : $"Good afternoon, may I order a {randomOrderableItem}?";
+                        customerOrderText.text = string.Empty;
+                        customerOrderText.text = isImposterRound ? $"I'm starving! Make a {randomOrderableItem} with {randomGarnish} for me." : $"Good afternoon, may I order a {randomOrderableItem} with {randomGarnish}?";
                         break;
                     case 2:
-                        customerOrderText.text = isImposterRound ? $"Make me a {randomOrderableItem} now. I don't have all day!" : $"Greetings! I would like a {randomOrderableItem} please. They are my favorite!";
+                        customerOrderText.text = string.Empty;
+                        customerOrderText.text = isImposterRound ? $"Make me a {randomOrderableItem} with {randomGarnish} now. I don't have all day!" : $"Greetings! I would like a {randomOrderableItem} with {randomGarnish} please. They are my favorite!";
                         break;
                     case 3:
-                        customerOrderText.text = isImposterRound ? $"Hurry and make me a {randomOrderableItem}! I don't have all day." : $"Oh boy, I think that a {randomOrderableItem} sounds delicious. May I get one of those?";
+                        customerOrderText.text = string.Empty;
+                        customerOrderText.text = isImposterRound ? $"Hurry and make me a {randomOrderableItem} with {randomGarnish}! I don't have all day." : $"Oh boy, I think that a {randomOrderableItem} with {randomGarnish} sounds delicious. May I get one of those?";
                         break;
                 }
 
@@ -255,8 +243,9 @@ public class CustomerController : MonoBehaviour
         displayedOrder = false;
         transform.position = new Vector3(2, 4f, -20);
         randomOrderableItem = string.Empty;
+        randomGarnish = string.Empty;
         cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
-        isImposterRound = 3 == UnityEngine.Random.Range(1, 6);
+        isImposterRound = 3 == UnityEngine.Random.Range(1, 4);
         robot.GetComponent<RobotController>().hasMovedForCurrentCustomer = false;
     }
 }

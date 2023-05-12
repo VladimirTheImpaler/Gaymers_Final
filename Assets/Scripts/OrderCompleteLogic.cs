@@ -9,6 +9,12 @@ public class OrderCompleteLogic : MonoBehaviour
     public GameObject customer;
     public GameObject cup;
 
+    public GameObject cherryOnDrink;
+    public GameObject lemonOnDrink;
+    public GameObject strawOnDrink;
+    public GameObject umbrellaOnDrink;
+    public GameObject umbrellaBallOnDrink;
+
     public GameObject orderCompleteBox;
     public GameObject smokeEffect;
 
@@ -114,6 +120,7 @@ public class OrderCompleteLogic : MonoBehaviour
         orderComplete = true;
         tipsText.text = $"\n<u>Tips</u>\n  ${tipsTotal}\n<u>+ ${randomTipAmount}</u>\n${newTotal}";
 
+        disableGarnishes();
         Instantiate(smokeEffect, orderCompleteBox.transform);
         //AudioSource.PlayClipAtPoint(soundName, transform.position);
 
@@ -128,9 +135,20 @@ public class OrderCompleteLogic : MonoBehaviour
         orderComplete = true;
         tipsText.text = $"\n<u>Tips</u>\n  ${tipsTotal}\n<u>- ${randomPenaltyAmount}</u>\n${newTotal}";
 
+        disableGarnishes();
         Instantiate(smokeEffect, orderCompleteBox.transform);
         //AudioSource.PlayClipAtPoint(soundName, transform.position);
 
         return newTotal;
+    }
+
+    private void disableGarnishes()
+    {
+
+        cherryOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        lemonOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        strawOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        umbrellaOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        umbrellaBallOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 }

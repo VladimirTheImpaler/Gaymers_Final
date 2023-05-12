@@ -22,7 +22,6 @@ TagManager:
   - Ingredient4Toggle
   - Ingredient5Toggle
   - cupParent
-  - iceShard
   - broom
   - juicerFreezeBlock
   - imposter
@@ -30,6 +29,7 @@ TagManager:
   - garnishCollider
   - lemonStartCube
   - tonic
+  - shavedIce
   layers:
   - Default
   - TransparentFX

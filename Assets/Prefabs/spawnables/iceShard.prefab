@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4597186280721765074}
   m_Layer: 0
   m_Name: iceShard
-  m_TagString: iceShard
+  m_TagString: shavedIce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

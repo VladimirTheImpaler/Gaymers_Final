@@ -20,6 +20,11 @@ public class cupLogic : MonoBehaviour
     void Start()
     {
 
+        itemList.Add("kegLiquid");
+        itemList.Add("appleJuice");
+        itemList.Add("iceCube");
+        itemList.Add("shavedIce");
+        itemList.Add("tonic");
     }
 
     // Update is called once per frame
@@ -83,13 +88,13 @@ public class cupLogic : MonoBehaviour
             appleMaterial.SetActive(true);
             //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
-        else if (other.gameObject.CompareTag("iceShard"))
+        else if (other.gameObject.CompareTag("shavedIce"))
         {
-            if (!itemList.Contains("iceShard")) {
+            if (!itemList.Contains("shavedIce")) {
                 AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
             }
 
-            itemList.Add("iceShard");
+            itemList.Add("shavedIce");
 
             other.gameObject.SetActive(false);
 

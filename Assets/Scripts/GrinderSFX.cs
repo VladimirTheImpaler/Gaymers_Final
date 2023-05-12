@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrinderSFX : MonoBehaviour
 {
+    public GameObject juicerCrank;
     public AudioSource grindingSFX;
 
     // Start is called before the first frame update
@@ -15,7 +16,7 @@ public class GrinderSFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<CrankRotation>().crankThatHog > 4.0f) {
+        if (juicerCrank.GetComponent<CrankRotation>().crankThatHog > 3.0f) {
             grindingSFX.volume = 1;
         }
         else {

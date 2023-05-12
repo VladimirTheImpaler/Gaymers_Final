@@ -15428,10 +15428,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 189125620ebdb8e4aa90f3195f109401, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -15524,6 +15524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec648c827fee1846a3b34cf776594ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  juicerCrank: {fileID: 1914925190}
   grindingSFX: {fileID: 0}
 --- !u!1 &620755411
 GameObject:
@@ -18268,6 +18269,8 @@ MonoBehaviour:
   mainLemon: {fileID: 698267961}
   cupColliderDisk: {fileID: 1776199668}
   lemonOnDrink: {fileID: 2055196224}
+  confirmSFX: {fileID: 0}
+  itemList: []
   inHand: 0
 --- !u!114 &698267965
 MonoBehaviour:
@@ -21828,6 +21831,8 @@ MonoBehaviour:
   mainCherry: {fileID: 806192356}
   cupColliderDisk: {fileID: 0}
   cherryOnDrink: {fileID: 0}
+  confirmSFX: {fileID: 0}
+  itemList: []
   inHand: 0
 --- !u!114 &806192359
 MonoBehaviour:
@@ -38180,11 +38185,17 @@ MonoBehaviour:
   cupPropertyList: {fileID: 1776199668}
   customer: {fileID: 1177117120}
   cup: {fileID: 1031274727}
+  cherryOnDrink: {fileID: 0}
+  lemonOnDrink: {fileID: 0}
+  strawOnDrink: {fileID: 0}
+  umbrellaOnDrink: {fileID: 0}
+  umbrellaBallOnDrink: {fileID: 0}
   orderCompleteBox: {fileID: 1386594447}
   smokeEffect: {fileID: 109675371}
   tipsText: {fileID: 1531004825}
   tipsTotal: 0
   orderComplete: 0
+  isSuccessful: 0
 --- !u!64 &1386594449
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -46512,8 +46523,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bb2ffe0fa7e064fa36e82f7ae51316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cupColliderDisk: {fileID: 0}
   itemList: []
   confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+  iceMaterial: {fileID: 0}
+  kegMaterial: {fileID: 0}
+  appleMaterial: {fileID: 0}
+  iceShardMaterial: {fileID: 0}
+  tonicMaterial: {fileID: 0}
 --- !u!64 &1776199671
 MeshCollider:
   m_ObjectHideFlags: 0

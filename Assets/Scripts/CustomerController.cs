@@ -15,14 +15,20 @@ public class CustomerController : MonoBehaviour
 
     public TextMeshProUGUI customerOrderText;
 
-    public Material walk1;
-    public Material walk2;
-    public Material walk3;
-    public Material walk4; 
+    public Material customerWalk1;
+    public Material customerWalk2;
+    public Material customerWalk3;
+    public Material customerWalk4;
+    public Material customerWalk5;
+    public Material customerWalk6;
+    public Material customerWalk7;
     public Material imposterWalk1;
     public Material imposterWalk2;
     public Material imposterWalk3;
     public Material imposterWalk4;
+    public Material imposterWalk5;
+    public Material imposterWalk6;
+    public Material imposterWalk7;
 
     public string randomOrderableItem;
     public string randomGarnish;
@@ -38,9 +44,10 @@ public class CustomerController : MonoBehaviour
     public float endingZ = -12f;
     public float xStart = -10f;
     public float zStart = -5f;
-    private int materialIndex = 0;
+    public int materialIndex;
     public float delay = .2f;
     float timer;
+    float pauseAfterOrderComplete;
 
     private List<string> orderableItems = new List<string>() { "Apple Smoothie", "Keg Tonic", "Everything Smoothie", "Purple Ice", "Liquid Apple", "Cube Juice" };
     private List<string> ingredients = new List<string>() { "Ice Cubes", "Keg Liquid", "Apple Juice", "Shaved Ice", "Tonic" };
@@ -83,7 +90,14 @@ public class CustomerController : MonoBehaviour
 
             CheckOrderComplete();
 
-            MovementAfterComplete();
+            if (orderComplete && pauseAfterOrderComplete >= 1.5f)
+            {
+                MovementAfterComplete();
+            }
+            else if (orderComplete)
+            {
+                pauseAfterOrderComplete += Time.deltaTime;
+            }
         }
     }
 
@@ -102,20 +116,27 @@ public class CustomerController : MonoBehaviour
         switch (materialIndex)
         {
             case 0:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : walk1;
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : customerWalk1;
                 break;
             case 1:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk2 : walk2;
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk2 : customerWalk2;
                 break;
             case 2:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk3 : walk3;
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk3 : customerWalk3;
                 break;
             case 3:
-                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk4 : walk4;
-                materialIndex = -1;
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk4 : customerWalk4;
+                break;
+            case 4:
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk5 : customerWalk5;
+                break;
+            case 5:
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk6 : customerWalk6;
+                break;
+            case 6:
+                this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk7 : customerWalk7;
                 break;
         }
-        materialIndex++;
     }
 
     private void MoveToBar()
@@ -142,7 +163,7 @@ public class CustomerController : MonoBehaviour
 
                 do
                 {
-                    randomOrderableItemsNumber = UnityEngine.Random.Range(0, 5);
+                    randomOrderableItemsNumber = UnityEngine.Random.Range(0, 6);
                     randomOrderableItem = orderableItems[randomOrderableItemsNumber];
                 } while (randomOrderableItemsNumber == lastItemOrdered);
 
@@ -240,6 +261,8 @@ public class CustomerController : MonoBehaviour
         arrivedAtBar = false;
         orderComplete = false;
         orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete = false;
+        orderCompleteBox.GetComponent<OrderCompleteLogic>().chargedTip = false;
+        orderCompleteBox.GetComponent<OrderCompleteLogic>().isSuccessful = false;
         displayedOrder = false;
         transform.position = new Vector3(2, 4f, -20);
         randomOrderableItem = string.Empty;
@@ -247,5 +270,7 @@ public class CustomerController : MonoBehaviour
         cupPropertyList.GetComponent<cupLogic>().itemList.Clear();
         isImposterRound = 3 == UnityEngine.Random.Range(1, 4);
         robot.GetComponent<RobotController>().hasMovedForCurrentCustomer = false;
+        materialIndex = UnityEngine.Random.Range(0, 7);
+        pauseAfterOrderComplete = 0f;
     }
 }

@@ -33,11 +33,11 @@ public class fancyDrinkLogic : MonoBehaviour
     void Update()
     {
 
-        order = orderCompleteBox.GetComponent<OrderCompleteLogic>().customer.GetComponent<CustomerController>().randomOrderableItem;
+        order = orderCompleteBox.GetComponent<OrderCompleteLogic>().customer.GetComponent<CustomerController>().randomOrderableItem.ToLower().Trim();
         orderComplete = orderCompleteBox.GetComponent<OrderCompleteLogic>().orderComplete;
         isSuccessful = orderCompleteBox.GetComponent<OrderCompleteLogic>().isSuccessful;
 
-        if (((order == this.fancyDrinkName) && orderComplete) && isSuccessful)
+        if (((order == this.fancyDrinkName.ToLower().Trim()) && orderComplete) && isSuccessful)
         {
             moveToCustomer = true;
             //good sound here

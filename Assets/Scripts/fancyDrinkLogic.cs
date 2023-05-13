@@ -95,11 +95,7 @@ public class fancyDrinkLogic : MonoBehaviour
 
             umbrellaOnFancyDrink.GetComponent<MeshRenderer>().enabled = false;
             umbrellaBallOnFancyDrink.GetComponent<MeshRenderer>().enabled = false;
-
-
         }
-
-
 
 
     }

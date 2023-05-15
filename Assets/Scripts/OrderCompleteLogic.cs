@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -154,8 +155,8 @@ public class OrderCompleteLogic : MonoBehaviour
 
     private float CompletedNotSuccessfully()
     {
-        var randomPenaltyAmount = (float)UnityEngine.Random.Range(200, 501) / (float)100;
-        var newTotal = tipsTotal - randomPenaltyAmount;
+        var randomPenaltyAmount = (float)Math.Round((float)UnityEngine.Random.Range(200, 501) / (float)100, 2);
+        var newTotal = (float)Math.Round(tipsTotal - randomPenaltyAmount, 2);
 
         orderComplete = true;
         chargedTip = true;

@@ -42,7 +42,12 @@ public class cupLogic : MonoBehaviour
         iceShardMaterial.SetActive(false);
         tonicMaterial.SetActive(false);
     }
-
+    
+    // private bool isCorrectIngredient(/*input here, case maybe?*/) {
+    //     // have lists of all ingredients (no garnishes)
+    //     // check garnishes in another script
+    // }
+    
     private void OnTriggerEnter(Collider other)
     {
 

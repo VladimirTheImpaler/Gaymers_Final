@@ -38199,6 +38199,7 @@ MonoBehaviour:
   tipsTotal: 0
   orderComplete: 0
   isSuccessful: 0
+  chargedTip: 0
 --- !u!64 &1386594449
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -41839,7 +41840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iceCube: {fileID: 7721398975577265993, guid: aa50d023352ad1242a3ce5649f3cba9d, type: 3}
   objectSpawnlocation: {x: 5.5, y: 4.5, z: 0.5}
-  iceSpawn_SFX: {fileID: 0}
+  iceSpawn_SFX: {fileID: 8300000, guid: d1ef46adb1c485c42abc0a2e090c145b, type: 3}
 --- !u!64 &1526579153
 MeshCollider:
   m_ObjectHideFlags: 0

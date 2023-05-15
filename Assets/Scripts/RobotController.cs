@@ -36,7 +36,7 @@ public class RobotController : MonoBehaviour
     public bool hasMovedForCurrentCustomer = false;
     private bool customerHasOrdered;
 
-    private Vector3 robotStartPos = new Vector3(2, 5.5f, -9);
+    private Vector3 robotStartPos = new Vector3(-1, 5.5f, -9);
     private Vector3 robotFinalPos = new Vector3(-11f, 5.5f, -5.5f);
     private Vector3 robotChalkboardPos = new Vector3(-0.5f, 9f, -1.5f);
 

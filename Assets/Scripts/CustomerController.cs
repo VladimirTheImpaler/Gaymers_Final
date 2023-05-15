@@ -82,7 +82,7 @@ public class CustomerController : MonoBehaviour
                 movedToPlayArea = true;
             }
 
-            CustomerWalkAnimation();
+            //CustomerWalkAnimation();
 
             MoveToBar();
 
@@ -101,7 +101,7 @@ public class CustomerController : MonoBehaviour
         }
     }
 
-    private void CustomerWalkAnimation()
+    /*private void CustomerWalkAnimation()
     {
         timer += Time.deltaTime;
         if (timer > delay)
@@ -109,7 +109,7 @@ public class CustomerController : MonoBehaviour
             CustomerWalk();
             timer -= delay;
         }
-    }
+    }*/
 
     public void CustomerWalk()
     {

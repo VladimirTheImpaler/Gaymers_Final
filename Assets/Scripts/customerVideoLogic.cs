@@ -5,15 +5,13 @@ using UnityEngine;
 public class customerVideoLogic : MonoBehaviour
 {
 
-    public GameObject thisCustomerVideo;
-    public GameObject Customer;
+    public GameObject thisCustomerObject;
+    public GameObject measureBox;
     public int thisVideoNumber;
-    private int customerVideoNumber;
+    public int customerVideoNumber;
     public bool customerImposter;
     public bool isThisImposter;
     
-    public int visiableInt;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +23,10 @@ public class customerVideoLogic : MonoBehaviour
     void Update()
     {
 
-        customerVideoNumber = Customer.GetComponent<CustomerController>().materialIndex;
-        customerImposter = Customer.GetComponent<CustomerController>().isImposterRound;
+        customerVideoNumber = measureBox.GetComponent<materialIndexTest>().customerVideoNumber;
+        customerImposter = measureBox.GetComponent<materialIndexTest>().isImposterRound;
 
-        visiableInt = customerVideoNumber;
+
 
         /*if ((isThisImposter == customerImposter) && (customerVideoNumber == thisVideoNumber))
         {

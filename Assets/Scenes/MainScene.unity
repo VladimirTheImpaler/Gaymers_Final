@@ -49250,7 +49250,7 @@ MonoBehaviour:
   chalkboard: {fileID: 475445018}
   robotText: {fileID: 174329950}
   speed: 10
-  timer: 82
+  timer: 0
   isTutorial: 1
   isTalking: 0
   needsHint: 0

@@ -21,11 +21,11 @@ public class cupLogic : MonoBehaviour
     void Start()
     {
 
-        itemList.Add("kegLiquid");
+/*        itemList.Add("kegLiquid");
         itemList.Add("appleJuice");
         itemList.Add("iceCube");
         itemList.Add("shavedIce");
-        itemList.Add("tonic");
+        itemList.Add("tonic");*/
     }
 
     // Update is called once per frame

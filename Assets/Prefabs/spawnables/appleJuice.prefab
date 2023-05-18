@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 4000
   stuck: 0
-  cleaning_SFX: {fileID: 8300000, guid: 5b6dfe1e5341cd943804967941daee30, type: 3}
+  cleaning_SFX: {fileID: 0}
   floorDrop_SFX: {fileID: 0}
 --- !u!114 &982370820892610163
 MonoBehaviour:

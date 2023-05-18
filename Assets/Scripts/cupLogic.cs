@@ -14,6 +14,13 @@ public class cupLogic : MonoBehaviour
     public GameObject iceShardMaterial;
     public GameObject tonicMaterial;
 
+    private List<string> purpleIce = new List<string>() { "kegLiquid" , "iceCube" , "appleJuice" };
+    private List<string> liquidApple = new List<string>() { "appleJuice" , "tonic" , "iceCube" };
+    private List<string> cubeJuice = new List<string>() { "iceCube" , "shavedIce" , "appleJuice" };
+    private List<string> appleSmoothie = new List<string>() { "appleJuice" , "shavedIce" , "kegLiquid" };
+    private List<string> kegTonic = new List<string>() { "kegLiquid" , "tonic" , "shavedIce" };
+    private List<string> everythingSmoothie = new List<string>() { "tonic" , "kegLiquid" , "appleJuice" , "shavedIce" };
+
     // add SFX variables here
 
     // Start is called before the first frame update
@@ -43,17 +50,63 @@ public class cupLogic : MonoBehaviour
         tonicMaterial.SetActive(false);
     }
     
-    // private bool isCorrectIngredient(/*input here, case maybe?*/) {
-    //     // have lists of all ingredients (no garnishes)
-    //     // check garnishes in another script
-    // }
+    private bool isCorrectIngredient(string ingredient, string drink) {
+
+        if (drink == "purpleIce") {
+            if (purpleIce.Contains(ingredient)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (drink == "liquidApple") {
+            if (liquidApple.Contains(ingredient)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (drink == "cubeJuice") {
+            if (cubeJuice.Contains(ingredient)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (drink == "appleSmoothie") {
+            if (appleSmoothie.Contains(ingredient)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (drink == "kegTonic") {
+            if (kegTonic.Contains(ingredient)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        if (drink == "everythingSmoothie") {
+            if (everythingSmoothie.Contains(ingredient)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        else {
+            return false;
+        }
+         // have lists of all ingredients (no garnishes)
+         // check garnishes in another script
+    }
     
     private void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.CompareTag("iceCube"))
         {
-            if (!itemList.Contains("iceCube")) { // may need to change this to only ding when correct ingredient is added
+            if (!itemList.Contains("iceCube") && isCorrectIngredient("iceCube", GetComponent<CustomerController>().randomOrderableItem)) {
                 AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
             }
 
@@ -63,11 +116,10 @@ public class cupLogic : MonoBehaviour
 
             setMaterialOff();
             iceMaterial.SetActive(true);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("kegLiquid"))
         {
-            if (!itemList.Contains("kegLiquid")) {
+            if (!itemList.Contains("kegLiquid") && isCorrectIngredient("kegLiquid", GetComponent<CustomerController>().randomOrderableItem)) {
                 AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
             }
 
@@ -77,11 +129,10 @@ public class cupLogic : MonoBehaviour
 
             setMaterialOff();
             kegMaterial.SetActive(true);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("appleJuice"))
         {
-            if (!itemList.Contains("appleJuice")) {
+            if (!itemList.Contains("appleJuice") && isCorrectIngredient("appleJuice", GetComponent<CustomerController>().randomOrderableItem)) {
                 AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
             }
 
@@ -91,11 +142,10 @@ public class cupLogic : MonoBehaviour
 
             setMaterialOff();
             appleMaterial.SetActive(true);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("shavedIce"))
         {
-            if (!itemList.Contains("shavedIce")) {
+            if (!itemList.Contains("shavedIce") && isCorrectIngredient("shavedIce", GetComponent<CustomerController>().randomOrderableItem)) {
                 AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
             }
 
@@ -105,10 +155,12 @@ public class cupLogic : MonoBehaviour
 
             setMaterialOff();
             iceShardMaterial.SetActive(true);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else if (other.gameObject.CompareTag("tonic"))
         {
+            if (!itemList.Contains("tonic") && isCorrectIngredient("tonic", GetComponent<CustomerController>().randomOrderableItem)) {
+                AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
+            }
 
             itemList.Add("tonic");
 
@@ -116,7 +168,6 @@ public class cupLogic : MonoBehaviour
 
             setMaterialOff();
             tonicMaterial.SetActive(true);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
         }
         else
         {

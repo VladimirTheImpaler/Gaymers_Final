@@ -46531,6 +46531,7 @@ MonoBehaviour:
   cupColliderDisk: {fileID: 0}
   itemList: []
   confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+  iceDropSFX: {fileID: 8300000, guid: 9c4639a7fb41d29409a7f2b6e0967878, type: 3}
   iceMaterial: {fileID: 0}
   kegMaterial: {fileID: 0}
   appleMaterial: {fileID: 0}

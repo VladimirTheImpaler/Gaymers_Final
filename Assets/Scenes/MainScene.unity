@@ -28065,7 +28065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cupPropertyList: {fileID: 1847144384}
   chalkboard: {fileID: 475445018}
-  cleaningSFX: {fileID: 0}
+  cleaningSFX: {fileID: 8300000, guid: cfabe191b8bde1042ab7754dc90a9494, type: 3}
 --- !u!1 &648306939
 GameObject:
   m_ObjectHideFlags: 0
@@ -48377,6 +48377,7 @@ MonoBehaviour:
   orderOnChalkboard: 0
   canMoveBackFromChalkboard: 0
   hasMovedForCurrentCustomer: 0
+  writing_SFX: {fileID: 0}
 --- !u!4 &1016839497
 Transform:
   m_ObjectHideFlags: 0
@@ -63519,6 +63520,8 @@ MonoBehaviour:
   orderComplete: 0
   isSuccessful: 0
   chargedTip: 0
+  success_SFX: {fileID: 8300000, guid: ed98ee265c1e9f04e80ccf31771285cc, type: 3}
+  failure_SFX: {fileID: 8300000, guid: c53c2990daa675746a051b8b6cc874a3, type: 3}
 --- !u!64 &1315776447
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -100402,7 +100405,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

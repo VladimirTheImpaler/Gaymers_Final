@@ -27,6 +27,9 @@ public class OrderCompleteLogic : MonoBehaviour
     public bool isSuccessful;
     public bool chargedTip;
 
+    public AudioClip success_SFX;
+    public AudioClip failure_SFX;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("mainCup"))
@@ -148,7 +151,7 @@ public class OrderCompleteLogic : MonoBehaviour
 
         disableGarnishes();
         Instantiate(smokeEffect, orderCompleteBox.transform);
-        //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        AudioSource.PlayClipAtPoint(success_SFX, transform.position);
 
         return newTotal;
     }
@@ -164,7 +167,7 @@ public class OrderCompleteLogic : MonoBehaviour
 
         disableGarnishes();
         Instantiate(smokeEffect, orderCompleteBox.transform);
-        //AudioSource.PlayClipAtPoint(soundName, transform.position);
+        AudioSource.PlayClipAtPoint(failure_SFX, transform.position);
 
         return newTotal;
     }

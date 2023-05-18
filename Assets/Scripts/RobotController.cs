@@ -36,6 +36,8 @@ public class RobotController : MonoBehaviour
     public bool hasMovedForCurrentCustomer = false;
     private bool customerHasOrdered;
 
+    public AudioClip writing_SFX;
+
     private Vector3 robotStartPos = new Vector3(-1, 5.5f, -9);
     private Vector3 robotFinalPos = new Vector3(-11f, 5.5f, -5.5f);
     private Vector3 robotChalkboardPos = new Vector3(-0.5f, 9f, -1.5f);
@@ -107,19 +109,19 @@ public class RobotController : MonoBehaviour
         }
         else if (timer <= 12.5f)
         {
-            robotText.text = "Some vagrants have wandered into a timeline they don’t belong in, ";
+            robotText.text = "Some vagrants have wandered into a timeline they donï¿½t belong in, ";
         }
         else if (timer <= 17.5f)
         {
-            robotText.text = "and your job is to find out who they are and remove them… if ya know what I mean.";
+            robotText.text = "and your job is to find out who they are and remove themï¿½ if ya know what I mean.";
         }
         else if (timer <= 22.5f)
         {
-            robotText.text = "You’ll pose as a bartender here, make drinks, and keep a low profile.";
+            robotText.text = "Youï¿½ll pose as a bartender here, make drinks, and keep a low profile.";
         }
         else if (timer <= 27.5f)
         {
-            robotText.text = "Eliminate the vagrants and you’ll be out of here in no time.";
+            robotText.text = "Eliminate the vagrants and youï¿½ll be out of here in no time.";
         }
         else if (timer <= 32.5f)
         {
@@ -252,6 +254,8 @@ public class RobotController : MonoBehaviour
             robot.transform.position = new Vector3(-0.5f, 9f, -1.5f);
             canMoveZ = false; 
             atChalkboard = true;
+
+            AudioSource.PlayClipAtPoint(writing_SFX, robot.transform.position);
         }
 
         // Supposed to switch to writing and delay for a few seconds

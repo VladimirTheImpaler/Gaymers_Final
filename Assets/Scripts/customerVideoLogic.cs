@@ -28,16 +28,16 @@ public class customerVideoLogic : MonoBehaviour
 
 
 
-        /*if ((isThisImposter == customerImposter) && (customerVideoNumber == thisVideoNumber))
+        if ((isThisImposter == customerImposter) && (customerVideoNumber == thisVideoNumber))
         {
 
-            this.thisCustomerVideo.SetActive(true);
+            this.thisCustomerObject.SetActive(true);
         }
         else
         {
 
-            this.thisCustomerVideo.SetActive(false);
-        }*/
+            this.thisCustomerObject.SetActive(false);
+        }
 
 
     }

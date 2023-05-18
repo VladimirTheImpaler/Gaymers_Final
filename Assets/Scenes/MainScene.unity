@@ -3427,14 +3427,13 @@ GameObject:
   - component: {fileID: 92311819}
   - component: {fileID: 92311818}
   - component: {fileID: 92311817}
-  - component: {fileID: 92311820}
   m_Layer: 0
   m_Name: customerVideo (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &92311816
 Transform:
   m_ObjectHideFlags: 0
@@ -3535,24 +3534,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92311815}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &92311820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 92311815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 7
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 1
 --- !u!1 &93153294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7804067723687814925, guid: 34968841b0187894f83d91d8695e31f1, type: 3}
@@ -3894,7 +3875,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.2527e-41, y: 6e-44, z: 2.6448623e-36, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 9.1835e-41, z: 1.8e-43, w: -32.37033}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -7990,7 +7971,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 6.486109e+19}
+  m_BoundingSphereOverride: {x: 0, y: 9.1835e-41, z: 1.8e-43, w: -22.193802}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -11108,14 +11089,13 @@ GameObject:
   - component: {fileID: 302633800}
   - component: {fileID: 302633799}
   - component: {fileID: 302633798}
-  - component: {fileID: 302633801}
   m_Layer: 0
   m_Name: customerVideo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &302633797
 Transform:
   m_ObjectHideFlags: 0
@@ -11216,24 +11196,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302633796}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &302633801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302633796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 4
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 1
 --- !u!1 &305079621
 GameObject:
   m_ObjectHideFlags: 0
@@ -19230,7 +19192,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 6.486109e+19}
+  m_BoundingSphereOverride: {x: NaN, y: NaN, z: NaN, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -19974,14 +19936,13 @@ GameObject:
   - component: {fileID: 506118197}
   - component: {fileID: 506118196}
   - component: {fileID: 506118195}
-  - component: {fileID: 506118198}
   m_Layer: 0
   m_Name: customerVideo (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &506118194
 Transform:
   m_ObjectHideFlags: 0
@@ -20082,24 +20043,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506118193}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &506118198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506118193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 6
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 1
 --- !u!1 &508381740
 GameObject:
   m_ObjectHideFlags: 0
@@ -23265,7 +23208,6 @@ GameObject:
   - component: {fileID: 590697188}
   - component: {fileID: 590697187}
   - component: {fileID: 590697186}
-  - component: {fileID: 590697189}
   m_Layer: 0
   m_Name: customerVideo (1)
   m_TagString: Untagged
@@ -23373,24 +23315,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590697184}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &590697189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 590697184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 1
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 1
 --- !u!1001 &593878271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31392,14 +31316,13 @@ GameObject:
   - component: {fileID: 744782893}
   - component: {fileID: 744782892}
   - component: {fileID: 744782891}
-  - component: {fileID: 744782894}
   m_Layer: 0
   m_Name: customerVideo (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &744782890
 Transform:
   m_ObjectHideFlags: 0
@@ -31408,8 +31331,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744782889}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1.6, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.025, z: 0.74999994}
+  m_LocalPosition: {x: -0.000000009313226, y: -1.6000001, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.025, z: 0.7499999}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1773356649}
@@ -31500,24 +31423,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744782889}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &744782894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744782889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 6
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 0
 --- !u!1001 &746409767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33574,7 +33479,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.85192e-40}
+  m_BoundingSphereOverride: {x: 6e-44, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -39207,14 +39112,13 @@ GameObject:
   - component: {fileID: 909188557}
   - component: {fileID: 909188556}
   - component: {fileID: 909188555}
-  - component: {fileID: 909188559}
   m_Layer: 0
   m_Name: aleinVideo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!328 &909188555
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -39315,24 +39219,6 @@ Transform:
   m_Father: {fileID: 2138715698}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &909188559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909188554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 5
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 1
 --- !u!1 &914370553
 GameObject:
   m_ObjectHideFlags: 0
@@ -47424,7 +47310,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 6.486109e+19}
+  m_BoundingSphereOverride: {x: 0, y: 2.4024e-41, z: 1.02e-43, w: 4.305297e+21}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -60456,7 +60342,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.4405384e-30, y: 9.1858e-41, z: 4.591775e-39, w: 4.1003012e-19}
+  m_BoundingSphereOverride: {x: 2.571394e-39, y: -568.5283, z: 6.01e-43, w: -2.0112305}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -68088,7 +67974,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: -38.467163, z: 6.75e-43, w: -65.80957}
+  m_BoundingSphereOverride: {x: 0.17297535, y: 0, z: 0, w: 1.1e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -75964,7 +75850,6 @@ GameObject:
   - component: {fileID: 1678331890}
   - component: {fileID: 1678331889}
   - component: {fileID: 1678331888}
-  - component: {fileID: 1678331891}
   m_Layer: 0
   m_Name: customerVideo (1)
   m_TagString: Untagged
@@ -76072,24 +75957,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678331886}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1678331891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1678331886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 2069957763}
-  thisVideoNumber: 1
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 0
 --- !u!1 &1680801649
 GameObject:
   m_ObjectHideFlags: 0
@@ -76399,14 +76266,13 @@ GameObject:
   - component: {fileID: 1681015098}
   - component: {fileID: 1681015097}
   - component: {fileID: 1681015096}
-  - component: {fileID: 1681015099}
   m_Layer: 0
   m_Name: customerVideo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1681015095
 Transform:
   m_ObjectHideFlags: 0
@@ -76507,24 +76373,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681015094}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1681015099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681015094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 4
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 0
 --- !u!1 &1682131330
 GameObject:
   m_ObjectHideFlags: 0
@@ -76708,14 +76556,13 @@ GameObject:
   - component: {fileID: 1686173505}
   - component: {fileID: 1686173504}
   - component: {fileID: 1686173503}
-  - component: {fileID: 1686173506}
   m_Layer: 0
   m_Name: customerVideo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1686173502
 Transform:
   m_ObjectHideFlags: 0
@@ -76816,24 +76663,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686173501}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1686173506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1686173501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 2
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 0
 --- !u!1 &1688248686
 GameObject:
   m_ObjectHideFlags: 0
@@ -77584,14 +77413,13 @@ GameObject:
   - component: {fileID: 1714809396}
   - component: {fileID: 1714809395}
   - component: {fileID: 1714809394}
-  - component: {fileID: 1714809397}
   m_Layer: 0
   m_Name: customerVideo (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1714809393
 Transform:
   m_ObjectHideFlags: 0
@@ -77692,24 +77520,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714809392}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1714809397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1714809392}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 5
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 0
 --- !u!1 &1714916575
 GameObject:
   m_ObjectHideFlags: 0
@@ -77801,14 +77611,13 @@ GameObject:
   - component: {fileID: 1723670868}
   - component: {fileID: 1723670867}
   - component: {fileID: 1723670866}
-  - component: {fileID: 1723670869}
   m_Layer: 0
   m_Name: customerVideo (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1723670865
 Transform:
   m_ObjectHideFlags: 0
@@ -77909,24 +77718,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723670864}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1723670869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723670864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 7
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 0
 --- !u!1 &1723839160
 GameObject:
   m_ObjectHideFlags: 0
@@ -80990,14 +80781,13 @@ GameObject:
   - component: {fileID: 1793032202}
   - component: {fileID: 1793032201}
   - component: {fileID: 1793032200}
-  - component: {fileID: 1793032203}
   m_Layer: 0
   m_Name: customerVideo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1793032199
 Transform:
   m_ObjectHideFlags: 0
@@ -81098,24 +80888,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793032198}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1793032203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793032198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 3
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 1
 --- !u!1 &1795840833
 GameObject:
   m_ObjectHideFlags: 0
@@ -81128,14 +80900,13 @@ GameObject:
   - component: {fileID: 1795840837}
   - component: {fileID: 1795840836}
   - component: {fileID: 1795840835}
-  - component: {fileID: 1795840838}
   m_Layer: 0
   m_Name: customerVideo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1795840834
 Transform:
   m_ObjectHideFlags: 0
@@ -81236,24 +81007,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795840833}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1795840838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795840833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 3
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 0
 --- !u!1 &1797858747
 GameObject:
   m_ObjectHideFlags: 0
@@ -81364,14 +81117,13 @@ GameObject:
   - component: {fileID: 1800813815}
   - component: {fileID: 1800813814}
   - component: {fileID: 1800813813}
-  - component: {fileID: 1800813816}
   m_Layer: 0
   m_Name: customerVideo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1800813812
 Transform:
   m_ObjectHideFlags: 0
@@ -81394,7 +81146,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800813811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_VideoClip: {fileID: 32900000, guid: e4a5862d0a1eb1644aa7ab1550102f0c, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
@@ -81429,7 +81181,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800813811}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -81472,24 +81224,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800813811}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1800813816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1800813811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2290ff5e2c6b32945a7d2993a7e1f573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCustomerObject: {fileID: 0}
-  measureBox: {fileID: 0}
-  thisVideoNumber: 2
-  customerVideoNumber: 0
-  customerImposter: 0
-  isThisImposter: 1
 --- !u!1 &1804550702
 GameObject:
   m_ObjectHideFlags: 0
@@ -87009,7 +86743,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.75e-43, y: 1.6632139e+22, z: 2.2535757e+20, w: 4.544822e+30}
+  m_BoundingSphereOverride: {x: 0.17297535, y: 0, z: 0, w: 1.1e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -93731,6 +93465,20 @@ MonoBehaviour:
   Customer: {fileID: 340905309}
   customerVideoNumber: 0
   isImposterRound: 0
+  customer1: {fileID: 1678331886}
+  customer2: {fileID: 1686173501}
+  customer3: {fileID: 1795840833}
+  customer4: {fileID: 1681015094}
+  customer5: {fileID: 1714809392}
+  customer6: {fileID: 744782889}
+  customer7: {fileID: 1723670864}
+  imposter1: {fileID: 590697184}
+  imposter2: {fileID: 1800813811}
+  imposter3: {fileID: 1793032198}
+  imposter4: {fileID: 302633796}
+  imposter5: {fileID: 909188554}
+  imposter6: {fileID: 506118193}
+  imposter7: {fileID: 92311815}
 --- !u!1 &2077440567
 GameObject:
   m_ObjectHideFlags: 0
@@ -96347,7 +96095,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138715697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4699998, z: 0}
+  m_LocalPosition: {x: 0, y: -1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

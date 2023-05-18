@@ -12558,7 +12558,19 @@ MonoBehaviour:
   restoreOriginalParent: 0
   onPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AudioSource.PlayClipAtPoint(name, transform.position)
+          m_BoolArgument: 0
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
       m_Calls: []
@@ -46531,7 +46543,6 @@ MonoBehaviour:
   cupColliderDisk: {fileID: 0}
   itemList: []
   confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
-  iceDropSFX: {fileID: 8300000, guid: 9c4639a7fb41d29409a7f2b6e0967878, type: 3}
   iceMaterial: {fileID: 0}
   kegMaterial: {fileID: 0}
   appleMaterial: {fileID: 0}
@@ -53802,6 +53813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cupPropertyList: {fileID: 1776199668}
   chalkboard: {fileID: 227916516}
+  cleaningSFX: {fileID: 0}
 --- !u!64 &2077898428
 MeshCollider:
   m_ObjectHideFlags: 0

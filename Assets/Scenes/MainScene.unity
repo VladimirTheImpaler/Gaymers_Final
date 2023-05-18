@@ -95844,20 +95844,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d688e97c8ebc0e47827caab082e1a78, type: 3}
   m_PrefabInstance: {fileID: 2024416619}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &2024416621
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 653024557}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &2024416622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95871,12 +95857,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingPart: {fileID: 584790698}
-  localMoveDistance: {x: 0, y: 0, z: -0.3}
+  localMoveDistance: {x: 0, y: -0.3, z: 0}
   engageAtPercent: 0.3
   disengageAtPercent: 0.2
   onButtonDown:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8081619040378242158}
+        m_TargetAssemblyTypeName: CupReturn, Assembly-CSharp
+        m_MethodName: resetFunction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onButtonUp:
     m_PersistentCalls:
       m_Calls: []

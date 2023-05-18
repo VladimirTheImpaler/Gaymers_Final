@@ -50,4 +50,19 @@ public class CupReturn : MonoBehaviour
             pipeCollider2.SetActive(true);
         }
     }
+
+    public void resetFunction()
+    {
+        theCup.SetActive(false);
+        // poof effect here
+        theCup.transform.position = GetComponent<ObjectPosition>().originPosition;
+        theCup.transform.rotation = Quaternion.Euler(GetComponent<RotationTracker>().originRotationXYZ);
+        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+
+        theCup.SetActive(true);
+
+        //deactivates pipe mesh
+        meshResetTimer = 1000;
+    }
+
 }

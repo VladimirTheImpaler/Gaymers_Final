@@ -113,7 +113,7 @@ public class CustomerController : MonoBehaviour
 
     public void CustomerWalk()
     {
-        switch (materialIndex)
+        /*switch (materialIndex)
         {
             case 0:
                 this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk1 : customerWalk1;
@@ -136,7 +136,7 @@ public class CustomerController : MonoBehaviour
             case 6:
                 this.gameObject.GetComponent<MeshRenderer>().material = isImposterRound ? imposterWalk7 : customerWalk7;
                 break;
-        }
+        }*/
     }
 
     private void MoveToBar()

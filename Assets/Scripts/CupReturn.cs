@@ -9,6 +9,8 @@ public class CupReturn : MonoBehaviour
     public GameObject pipeCollider1;
     public GameObject pipeCollider2;
 
+    public GameObject tonicMaterial;
+
     public int meshResetTimer = 1000;
 
     // Start is called before the first frame update
@@ -25,13 +27,14 @@ public class CupReturn : MonoBehaviour
 
         if (drinkFinishZone.GetComponent<OrderCompleteLogic>().orderComplete == true) {
             
-            theCup.SetActive(false);
+            //theCup.SetActive(false);
             // poof effect here
             theCup.transform.position = GetComponent<ObjectPosition>().originPosition;
             theCup.transform.rotation = Quaternion.Euler(GetComponent<RotationTracker>().originRotationXYZ);
             GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
  
-            theCup.SetActive(true);
+            //theCup.SetActive(true);
+            tonicMaterial.SetActive(true);
 
             // poof effect in front of customer, finished drink appears
 

@@ -30,6 +30,7 @@ TagManager:
   - lemonStartCube
   - tonic
   - shavedIce
+  - secretBucket
   layers:
   - Default
   - TransparentFX

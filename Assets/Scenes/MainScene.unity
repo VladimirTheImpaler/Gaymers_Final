@@ -28451,6 +28451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cupPropertyList: {fileID: 1847144384}
   chalkboard: {fileID: 475445018}
+  cleaningSFX: {fileID: 0}
 --- !u!1 &648306939
 GameObject:
   m_ObjectHideFlags: 0
@@ -88252,6 +88253,7 @@ MonoBehaviour:
   cupColliderDisk: {fileID: 1847144384}
   itemList: []
   confirmSFX: {fileID: 8300000, guid: 276ccef0421862249818b3943e2b96b7, type: 3}
+  iceDropSFX: {fileID: 0}
   iceMaterial: {fileID: 1040075865}
   kegMaterial: {fileID: 500176890}
   appleMaterial: {fileID: 688244062}
@@ -103013,8 +103015,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147549275016}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -9.664, y: -18.692, z: 2.095}
-  m_LocalScale: {x: 400, y: 400, z: 400}
+  m_LocalPosition: {x: -9.856, y: -18.692, z: 1.874}
+  m_LocalScale: {x: 500, y: 500, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1974202943}

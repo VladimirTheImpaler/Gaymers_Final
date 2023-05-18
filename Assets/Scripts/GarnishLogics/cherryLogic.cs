@@ -63,7 +63,7 @@ public class cherryLogic : MonoBehaviour
                 AudioSource.PlayClipAtPoint(confirmSFX, transform.position);
                 }
                 
-                cupColliderDisk.GetComponent<cupLogic>().itemList.Add("cherry");
+                cupColliderDisk.GetComponent<cupLogic>().itemList.Add("Cherries");
 
                 this.gameObject.GetComponent<MeshRenderer>().enabled = false;
                 cherryOnDrink.gameObject.GetComponent<MeshRenderer>().enabled = true;

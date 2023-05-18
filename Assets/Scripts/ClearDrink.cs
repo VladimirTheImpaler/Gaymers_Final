@@ -6,6 +6,7 @@ public class ClearDrink : MonoBehaviour
 {
     public GameObject cupPropertyList;
     public GameObject chalkboard;
+    public AudioClip cleaningSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,8 @@ public class ClearDrink : MonoBehaviour
             chalkboard.GetComponent<ChalkboardLogic>().Ingredient3Toggle.isOn = false;
             chalkboard.GetComponent<ChalkboardLogic>().Ingredient4Toggle.isOn = false;
             chalkboard.GetComponent<ChalkboardLogic>().Ingredient5Toggle.isOn = false;
+
+            AudioSource.PlayClipAtPoint(cleaningSFX, transform.position);
         }
     }
 }

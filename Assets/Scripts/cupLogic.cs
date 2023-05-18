@@ -8,6 +8,7 @@ public class cupLogic : MonoBehaviour
 
     public List<string> itemList = new List<string>();
     public AudioClip confirmSFX;
+    public AudioClip iceDropSFX;
     public GameObject iceMaterial;
     public GameObject kegMaterial;
     public GameObject appleMaterial;
@@ -63,7 +64,7 @@ public class cupLogic : MonoBehaviour
 
             setMaterialOff();
             iceMaterial.SetActive(true);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+            AudioSource.PlayClipAtPoint(iceDropSFX, transform.position);
         }
         else if (other.gameObject.CompareTag("kegLiquid"))
         {
@@ -105,7 +106,7 @@ public class cupLogic : MonoBehaviour
 
             setMaterialOff();
             iceShardMaterial.SetActive(true);
-            //AudioSource.PlayClipAtPoint(soundName, transform.position);
+            AudioSource.PlayClipAtPoint(iceDropSFX, transform.position);
         }
         else if (other.gameObject.CompareTag("tonic"))
         {

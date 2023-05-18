@@ -3875,7 +3875,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 9.1835e-41, z: 1.8e-43, w: -32.37033}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4014,7 +4014,7 @@ MonoBehaviour:
   spawnSphere: {fileID: 145060272}
   liquidDrop: {fileID: 7721398975577265993, guid: 4a4a8dab0deeda84c92f7e0c9ab52c6b, type: 3}
   objectSpawnlocation: {x: 0, y: 0, z: 0}
-  liquidSpawn_SFX: {fileID: 8300000, guid: 71cd8276dd4a1b846ad97038830fb581, type: 3}
+  liquidSpawn_SFX: {fileID: 0}
   isPouring: 0
 --- !u!114 &101609672
 MonoBehaviour:
@@ -7971,7 +7971,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.5228728e+19, y: 3.578061e+12, z: 1.01e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 9.1835e-41, z: 1.8e-43, w: -22.193802}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -19192,7 +19192,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 3e-45}
+  m_BoundingSphereOverride: {x: NaN, y: NaN, z: NaN, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -28500,7 +28500,7 @@ MonoBehaviour:
   spawnSphere: {fileID: 804223863}
   liquidDrop: {fileID: 7721398975577265993, guid: 96c653a62a10f774c932dda26ce376d2, type: 3}
   objectSpawnlocation: {x: -0.5, y: 3.65, z: 0.85}
-  kegLiquidSpawn_SFX: {fileID: 8300000, guid: 71cd8276dd4a1b846ad97038830fb581, type: 3}
+  kegLiquidSpawn_SFX: {fileID: 0}
 --- !u!64 &667179228
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -33479,7 +33479,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 6e-44, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -41403,7 +41403,7 @@ MeshCollider:
   m_GameObject: {fileID: 3561886893830075259}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -47310,7 +47310,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 2.4024e-41, z: 1.02e-43, w: 4.305297e+21}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -56652,7 +56652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iceCube: {fileID: 7721398975577265993, guid: aa50d023352ad1242a3ce5649f3cba9d, type: 3}
   objectSpawnlocation: {x: 5.5, y: 4.5, z: 0.5}
-  iceSpawn_SFX: {fileID: 8300000, guid: d1ef46adb1c485c42abc0a2e090c145b, type: 3}
+  iceSpawn_SFX: {fileID: 0}
 --- !u!64 &1257183970
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -60342,7 +60342,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.33e-43, y: -5.6299e-41, z: 6.33e-43, w: 0}
+  m_BoundingSphereOverride: {x: 2.571394e-39, y: -568.5283, z: 6.01e-43, w: -2.0112305}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -67974,7 +67974,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.33e-43, y: -5.6299e-41, z: 6.33e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0.17297535, y: 0, z: 0, w: 1.1e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -74662,7 +74662,7 @@ MonoBehaviour:
   spawnSphere: {fileID: 1732278611}
   liquidDrop: {fileID: 7721398975577265993, guid: 2625b849b6b5c36478e3d8b3f18fd31a, type: 3}
   objectSpawnlocation: {x: 0, y: 0, z: 0}
-  liquidSpawn_SFX: {fileID: 8300000, guid: 71cd8276dd4a1b846ad97038830fb581, type: 3}
+  liquidSpawn_SFX: {fileID: 0}
   isPouring: 0
 --- !u!114 &1660714356
 MonoBehaviour:
@@ -86743,7 +86743,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 10.000001, z: 9.333333, w: -11.333333}
+  m_BoundingSphereOverride: {x: 0.17297535, y: 0, z: 0, w: 1.1e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -88651,7 +88651,7 @@ MeshCollider:
   m_GameObject: {fileID: 1954322523}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -97600,11 +97600,6 @@ MonoBehaviour:
   drinkFinishZone: {fileID: 1315776444}
   pipeCollider1: {fileID: 1168277785}
   pipeCollider2: {fileID: 1924737073}
-  iceMaterial: {fileID: 1040075865}
-  kegMaterial: {fileID: 500176890}
-  appleMaterial: {fileID: 688244062}
-  iceShardMaterial: {fileID: 134579834}
-  tonicMaterial: {fileID: 914686990}
   meshResetTimer: 1000
 --- !u!4 &8091132605276050148
 Transform:

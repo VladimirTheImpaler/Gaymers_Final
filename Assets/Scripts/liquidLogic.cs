@@ -8,7 +8,7 @@ public class liquidLogic : MonoBehaviour
     public int life;
     public bool stuck = false;
     public AudioClip cleaning_SFX;
-    //public AudioClip floorDrop_SFX;
+    public AudioClip floorDrop_SFX;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class liquidLogic : MonoBehaviour
             stuck = true;
             this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
             this.life = 99999999;
-            //AudioSource.PlayClipAtPoint(floorDrop_SFX, transform.position);
+            AudioSource.PlayClipAtPoint(floorDrop_SFX, transform.position);
         }
         else
         {
